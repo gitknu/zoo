@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<title>ЗооКНУТШ</title>
+<link rel="shortcut icon" href="a198cd0c_e2f0_4c99_ba51_342624a24db9_WP4_icon.ico" type="image/x-icon"/>
+<link href = "https://fonts.googleapis.com/css?family=Nunito+Sans:400,900&display=swap" rel="stylesheet">
+<style>
+* {
+  box-sizing: border-box;
+}
+body,#artInput{text-align: center;}
+#artInput {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/221px-Vector_search_icon.svg.png');
+  background-position: 10px 10px;;
+  background-repeat: no-repeat;
+  background-size: 25px;
+  width: 60%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  border-radius: 25px;
+}
+#artInput:focus {
+  outline:none
+}
+#artTable {
+  border-collapse: collapse;
+  width: 85%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  margin-bottom:40px;
+}
+#artTable th, #artTable td {
+  text-align: left;
+  padding: 12px;
+  text-align: center;
+
+}
+#artTable tr {
+  border-bottom: 1px solid #ddd;
+
+}
+#artTable tr.header, #artTable tr:hover {
+  background-color: #f1f1f1;
+
+}
+a:hover {
+  color: #c71b00;
+  text-decoration: none;
+}
+
+
+
+h2, h1, p {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+@keyframes artshadow {
+  from {}
+  to {text-shadow: 2px 2px 5px black;}
+}
+h1 {
+  color: #bf2713;
+}
+</style>
+</head>
+<body>
+<h1><b>Зоомузей КНУТШ</b></a></h1>
+<h2>доступний пошук по каталогу</h2>
+<div class="centerenter">
+<input type="text" id="artInput" onkeyup="artFunction()" placeholder="Шукайте легко, шукайте швидко!" title="Work search">
+</div>
+<div class="tablesearch">
+<table id="artTable" align="center">
+<tr class="header">
+<th style="width:25%">Фото</th>
+<th style="width:25%">Експонат</th>
+<th style="width:25%">Опис</th>
+<th style="width:25%">Рік</th>
+<th style="width:25%">Місце</th>
+</tr>
+<tr>
+<td><img src="imgs/1.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<td><b><i><a href="https://uk.wikipedia.org/wiki/%D0%A1%D0%BB%D0%BE%D0%BD_%D1%96%D0%BD%D0%B4%D1%96%D0%B9%D1%81%D1%8C%D0%BA%D0%B8%D0%B9">Індійський слон</a></i></b></td>
+<td>Другий за величиною наземний ссавець сучасного світу. Поширений в Південній та Південно-Східній Азії.</td>
+<td>1960</td>
+<td>◼ 1, <br>□ 12</td>
+</tr>
+<tr>
+<td><img src="imgs/2.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<td><b><i><a href="https://uk.wikipedia.org/wiki/%D0%9C%D0%BE%D1%80%D1%81%D1%8C%D0%BA%D0%B0_%D0%BA%D0%BE%D1%80%D0%BE%D0%B2%D0%B0_%D0%A1%D1%82%D0%B5%D0%BB%D0%BB%D0%B5%D1%80%D0%B0">Стеллерова морська корова</a></i></b></td>
+<td>Викопна тварина знищена людиною у XVIII-му столітті. Мешкала в північній частині Тихого океану.</td>
+<td>????</td>
+<td>◼ 1, <br>□ 12</td>
+</tr>
+<tr>
+<td><img src="imgs/3.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<td><b><i><a href="https://uk.wikipedia.org/wiki/%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%B0_%D0%B7%D0%B5%D0%BB%D0%B5%D0%BD%D0%B0_%D0%B6%D0%B0%D0%B1%D0%B0">Жаба-віл</a></i></b></td>
+<td>Одна з найбільших жаб сучасного світу. Має гучний голос, що нагадує ревіння вола.</td>
+<td>????</td>
+<td>◼ 1, <br>□ 12</td>
+</tr>
+<tr>
+<td><img src="imgs/4.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<td><b><i><a href="https://uk.wikipedia.org/wiki/%D0%92%D0%B8%D0%B2%D1%96%D1%80%D0%BA%D0%B0_%D0%B7%D0%B2%D0%B8%D1%87%D0%B0%D0%B9%D0%BD%D0%B0">Білка звичайна</a></i></b></td>
+<td>(опис відсутній)</td>
+<td>????</td>
+<td>◼ 1, <br>□ 12</td>
+</tr>
+<tr>
+<td><img src="imgs/5.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<td><b><i><a href="https://uk.wikipedia.org/wiki/%D0%9F%D1%80%D0%B8%D1%87%D0%B5%D0%BF%D0%B0_%D0%B7%D0%B2%D0%B8%D1%87%D0%B0%D0%B9%D0%BD%D0%B0">Причепа звичайна</a></i></b></td>
+<td>Має на голові великий присосок у формі диску, з його допомогою парами чіпляються до риб, черепах, китів.</td>
+<td>????</td>
+<td>◼ 1, <br>□ 12</td>
+</tr>
+<tr>
+<td><img src="imgs/6.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<td><b><i><a href="https://uk.wikipedia.org/wiki/%D0%91%D0%BE%D0%B4%D1%8F%D0%B3%D0%B0">Риба-куля</a></i></b></td>
+<td>Тіло при небезпеці утворює кулю, вкриту гострими шипами. Поширена у тропічних і субтропічних водах океанів.</td>
+<td>????</td>
+<td>◼ 1, <br>□ 12</td>
+</tr>
+<tr>
+<td><img src="imgs/7.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<td><b><i><a href="https://uk.wikipedia.org/wiki/%D0%A5%D0%B0%D0%BC%D0%B5%D0%BB%D0%B5%D0%BE%D0%BD_%D0%B7%D0%B2%D0%B8%D1%87%D0%B0%D0%B9%D0%BD%D0%B8%D0%B9">Хамелеон звичайний</a></i></b></td>
+<td>Може змінювати колір на блакитний і жовтий. Мешкає у Пд. Іспанії, о. Крит, Пн. Африці, Малій Азії, Сирії.</td>
+<td>1960</td>
+<td>◼ 1, <br>□ 12</td>
+</tr>
+<tr>
+<td><img src="imgs/8.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<td><b><i><a href="https://uk.wikipedia.org/wiki/%D0%9A%D0%B0%D1%87%D0%BA%D0%BE%D0%B4%D0%B7%D1%8C%D0%BE%D0%B1">Качконіс</a></i></b></td>
+<td>Назву мешканець річок та озер Австралії та Тасманії одержав за мордочку, яка закінчується “качиним дзьобом”.</td>
+<td>????</td>
+<td>◼ 1, <br>□ 12</td>
+</tr>
+<tr>
+<td><img src="imgs/9.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<td><b><i><a href="https://uk.wikipedia.org/wiki/%D0%9B%D1%96%D0%BD%D0%B8%D0%B2%D0%B5%D1%86%D1%8C_%D1%82%D1%80%D0%B8%D0%BF%D0%B0%D0%BB%D0%B8%D0%B9">Лінивець трипалий</a></i></b></td>
+<td>У цього виду 9 шийних хребців – найбільша серед сучасних ссавців кількість. Голова може обертатися на 270.</td>
+<td>????</td>
+<td>◼ 1, <br>□ 12</td>
+</tr>
+<tr>
+<td><img src="imgs/10.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<td><b><i><a href="https://uk.wikipedia.org/wiki/%D0%9C%D1%83%D1%80%D0%B0%D1%85%D0%BE%D1%97%D0%B4_%D0%B2%D0%B5%D0%BB%D0%B8%D0%BA%D0%B8%D0%B9">Мурахоїд великий</a></i></b></td>
+<td>Найбільші ссавці, що їдять комах; близько 1,2 м та 40 кг. Живе у степах і вологих лісах Пд. Америки.</td>
+<td>????</td>
+<td>◼ 1, <br>□ 12</td>
+</tr>
+<tr>
+<td><img src="imgs/11.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<td><b><i><a href="https://uk.wikipedia.org/wiki/%D0%97%D0%B0%D1%94%D1%86%D1%8C_%D1%81%D1%96%D1%80%D0%B8%D0%B9">Заєць сірий</a></i></b></td>
+<td>У Пн. Україні крім нього трапляється занесений до ЧКУ заєць-біляк, зимове хутро якого майже цілком біле.</td>
+<td>????</td>
+<td>◼ 1, <br>□ 12</td>
+</tr>
+<tr>
+<td><img src="imgs/12.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<td><b><i><a href="https://google.com">Піщанка червонохвоста</a></i></b></td>
+<td> Підземні ходи прокладає на глибині до 1-1,5 м. Основу живлення складає насіння та цибулинки рослин.</td>
+<td>????</td>
+<td>◼ 1, <br>□ 12</td>
+</tr>
+<tr>
+<td><img src="imgs/13.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<td><b><i><a href="https://uk.wikipedia.org/wiki/%D0%9D%D0%BE%D1%81%D1%83%D1%85%D0%B0_%D0%B7%D0%B2%D0%B8%D1%87%D0%B0%D0%B9%D0%BD%D0%B0">Носуха</a></i></b></td>
+<td>Свою назву цей родич єнота отримав за  довгий дуже рухливий ніс, за допомогою якого розшукує їжу.</td>
+<td>????</td>
+<td>◼ 1, <br>□ 12</td>
+</tr>
+<tr>
+<td><img src="imgs/14.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<td><b><i><a href="https://uk.wikipedia.org/wiki/%D0%92%D0%B5%D0%B4%D0%BC%D1%96%D0%B4%D1%8C_%D0%B1%D1%96%D0%BB%D0%B8%D0%B9">Білий ведмідь</a></i></b></td>
+<td>Найбільший із сучасних хижих ссавців суходолу, до 800 кг. Розповсюджений в арктичних широтах Європи, Азії, Пн. Америки.</td>
+<td>????</td>
+<td>◼ 1, <br>□ 12</td>
+</tr>
+<tr>
+<td><img src="imgs/15.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<td><b><i><a href="https://uk.wikipedia.org/wiki/%D0%93%D0%BE%D1%80%D0%BD%D0%BE%D1%81%D1%82%D0%B0%D0%B9">Горностай</a></i></b></td>
+<td>Рідкісний хижий ссавець лісів Європи та Азії влітку має двокольорне хутро: верх темно-коричневий, низ – білий.</td>
+<td>????</td>
+<td>◼ 1, <br>□ 12</td>
+</tr>
+<tr>
+<td><img src="imgs/16.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<td><b><i><a href="https://uk.wikipedia.org/wiki/%D0%9C%D0%BE%D1%80%D0%B6">Морж (череп)</a></i></b></td>
+<td>Вага дорослих самців сягає 1,5-2 т, самиць – 800-900 кг. Характерна особливість моржів – величезні ікла (до 80 см).</td>
+<td>????</td>
+<td>◼ 1, <br>□ 12</td>
+</tr>
+<tr>
+<td><img src="imgs/17.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<td><b><i><a href="https://uk.wikipedia.org/wiki/%D0%91%D1%96%D0%BB%D0%B8%D0%B9_%D0%BD%D0%BE%D1%81%D0%BE%D1%80%D1%96%D0%B3">Носоріг білий</a></i></b></td>
+<td>Один із найбільших ссавців суходолу (вага до 3,5 т.). Розповсюджений у саванах Африки на південь від Сахари.</td>
+<td>????</td>
+<td>◼ 1, <br>□ 12</td>
+</tr>
+<tr>
+<td><img src="imgs/18.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<td><b><i><a href="https://google.com">Сенегальський галаго</a></i></b></td>
+<td>Живе у вологих лісах Зх. Африки. Великі очі допомагають знаходити здобич (жуків, метеликів тощо) вночі.</td>
+<td>????</td>
+<td>◼ 1, <br>□ 12</td>
+</tr>
+<tr>
+<td><img src="imgs/19.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<td><b><i><a href="https://google.com">Акула-молот</a></i></b></td>
+<td>Одна з найбільших морських істот. Названа через форму голови. Поширена в тропічних водах Тихого, Індійського і Атлантичного океанів.</td>
+<td>????</td>
+<td>◼ 1, <br>□ 12</td>
+</tr>
+<tr>
+<td><img src="imgs/0.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<td><b><i><a href="https://google.com">Зразок (експонат)</a></i></b></td>
+<td>Короткий опис на 105 символів короткий опис на 105 символів короткий опис на 105 символів короткий опис.</td>
+<td>????</td>
+<td>◼ 1, <br>□ 12</td>
+</tr>
+<tr>
+<td><img src="imgs/0.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<td><b><i><a href="https://google.com">Зразок (експонат)</a></i></b></td>
+<td>Короткий опис на 105 символів короткий опис на 105 символів короткий опис на 105 символів короткий опис.</td>
+<td>????</td>
+<td>◼ 1, <br>□ 12</td>
+</tr>
+</table>
+</div>
+<p><i>оригінальна розробка - <a href = "https://micahlt.github.io/">Micah Lindley</a></i></p>
+<script>function artFunction() {
+  // Declare starting variables
+  var input = document.getElementById("artInput");
+  var filter = input.value.toUpperCase();
+  var table = document.getElementById("artTable");
+  var trs = table.tBodies[0].getElementsByTagName("tr");
+  // Loop through rows
+  for (var i = 0; i < trs.length; i++) {
+    // Define the cells
+    var tds = trs[i].getElementsByTagName("td");
+    // hide the row
+    trs[i].style.display = "none";
+    // loop through row cells
+    for (var i2 = 0; i2 < tds.length; i2++) {
+      // if there's a match
+      if (tds[i2].innerHTML.toUpperCase().indexOf(filter) > -1) {
+        // show the row
+        trs[i].style.display = "";
+        // skip to the next row
+        continue;
+      }
+    }
+  }
+}
+</script>
+</body>
+</html>
