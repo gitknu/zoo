@@ -4,14 +4,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <title>ЗооКНУТШ</title>
-<link rel="shortcut icon" href="a198cd0c_e2f0_4c99_ba51_342624a24db9_WP4_icon.ico" type="image/x-icon"/>
-<link href = "https://fonts.googleapis.com/css?family=Nunito+Sans:400,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,900&display=swap" rel="stylesheet">
 <style>
 * {
   box-sizing: border-box;
 }
-body,#artInput{text-align: center;}
-#artInput {
+body,#Search{text-align: center;}
+#Search {
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/221px-Vector_search_icon.svg.png');
   background-position: 10px 10px;;
   background-repeat: no-repeat;
@@ -23,41 +22,35 @@ body,#artInput{text-align: center;}
   margin-bottom: 12px;
   border-radius: 25px;
 }
-#artInput:focus {
+#Search:focus {
   outline:none
 }
-#artTable {
+#dbase {
   border-collapse: collapse;
   width: 85%;
   border: 1px solid #ddd;
   font-size: 18px;
   margin-bottom:40px;
 }
-#artTable th, #artTable td {
+#dbase th, #dbase td {
   text-align: left;
   padding: 12px;
   text-align: center;
-
 }
-#artTable tr {
+#dbase tr {
   border-bottom: 1px solid #ddd;
 
 }
-#artTable tr.header, #artTable tr:hover {
+#dbase tr.header, #dbase tr:hover {
   background-color: #f1f1f1;
-
 }
 a:hover {
   color: #c71b00;
   text-decoration: none;
 }
-
-
-
 h2, h1, p {
   font-family: 'Nunito Sans', sans-serif;
 }
-
 @keyframes artshadow {
   from {}
   to {text-shadow: 2px 2px 5px black;}
@@ -68,21 +61,22 @@ h1 {
 </style>
 </head>
 <body>
-<h1><b>Зоомузей КНУТШ</b></a></h1>
+<h1><b>Зоомузей КНУТШ</b></h1>
 <h2>доступний пошук по каталогу</h2>
 <div class="centerenter">
-<input type="text" id="artInput" onkeyup="artFunction()" placeholder="Шукайте легко, шукайте швидко!" title="Work search">
+<input type="text" id="Search" onkeyup="searchFn()" placeholder="Шукайте легко, шукайте швидко!" title="Work search">
 </div>
 <div class="tablesearch">
-<table id="artTable" align="center">
-<tr class="header">
-<th style="width:25%">Фото</th>
-<th style="width:25%">Експонат</th>
-<th style="width:25%">Опис</th>
-<th style="width:25%">Рік</th>
-<th style="width:25%">Місце</th>
+<table id="dbase" align="center">
+<tr class="header"> <!--anim_num-->
+<th style="width:25%">Фото</th> <!--img-->
+<th style="width:25%">Експонат</th> <!--name-->
+<th style="width:25%">Опис</th> <!--info-->
+<th style="width:25%">Роки</th> <!--year-->
+<th style="width:25%">Місце</th> <!--place-->
 </tr>
-<tr class="anim_3">
+
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Єхидна_австралійська">Єхидна (коротконоса, австралійська)</a></i></b></td>
     <td class="info">Схожі на велетенських їжаків, єхидни живуть в Австралії, а також на Тасманії та Новій Гвінеї. Живляться дрібними комахами. Раз на рік відкладають 1-2 яйця, які виношують у сумці на животі, що утворюється лише на час розмноження. Рятуючись від хижаків, закопуються в землю. </td>
@@ -90,15 +84,15 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_4">
-    <td class="img"><img src="imgs/8.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<tr>
+    <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Качкодзьоб">Качконіс (качкодзьоб)</a></i></b></td>
     <td class="info">Свою назву цей мешканець річок та озер Австралії та Тасманії  одержав за дивовижну мордочку, яка закінчується “качиним дзьобом”. Він допомагає тваринці в пошуках поживи. На кінцівках є плавальні перетинки, а в дорослих самців – і шпори, пов’язані з отрутними залозами. Живиться дрібними водяними тваринами. Раз на рік відкладає 1-3 яйця в норі.</td>
     <td class="year">????</td>
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_5">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Petrodromus_tetradactylus">Стрибунець лісовий</a></i></b></td>
     <td class="info">Ці, схожі на маленьких кенгуру, звірятка поширені тільки в Африці. Мешкають у саванах та розріджених лісах. Живляться комахами, яких розшукують за допомогою невеличких хоботків.</td>
@@ -106,7 +100,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_6">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Хохуля_руська">Хохуля звичайна (руська)</a></i></b></td>
     <td class="info">Характерні мешканці заплавних озер та річок Східної Європи. Вони добре плавають та живляться дрібними тваринами та рослинами. Останнім часом чисельність хохулі швидко скорочується, і вони занесені до Червоної книги України та МСОП. В Україні вони відомі з заплав річок Десна та Сіверський Донець.</td>
@@ -114,7 +108,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_7">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Малайський_шерстокрил">Шерстокрил</a></i></b></td>
     <td class="info">Шерстокрили, які мешкають в Південно-Східній Азії, науковці вважають близькими до мавп та кажанів. Завдяки величезній літальній перетинці, яка охоплює все тіло від шиї до хвоста, вони здатні стрибати на відстань до 60 метрів. Живляться плодами.</td>
@@ -122,7 +116,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_8">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Смугач_фінвал">Смугач фінвал (смугач оселедцевий)</a></i></b></td>
     <td class="info">Належать до групи вусатих китів. Фінвали - другі за величиною ссавці сучасного світу. Довжина тіл цих велетнів досягає 28 метрів. Більшими за них є лише сині кити (Balaenoptera musculus). Розповсюдження всесвітнє.</td>
@@ -130,7 +124,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_9">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Кашалот">Кашалот</a></i></b></td>
     <td class="info">Найбільші з сучасних зубатих китів. Довжина тіла самців досягає 18 метрів. Голова величезна (до 30% довжини тіла). На вузькій нижній шелепі 36-60 зубів, на верхній – зуби відсутні. Розповсюджені у помірних та холодних широтах Світового океану. Живляться рибою, кальмарами, восьминогами. Можуть пірнати на глибину до 2,5 кілометрів, знаходячись під водою до 1,5 години. Чисельність суттєво скоротилася внаслідок інтенсивного промислу в ХІХ-ХХ століттях.</td>
@@ -138,23 +132,23 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_10">
-    <td class="img"><img src="imgs/2.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<tr>
+    <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Морська_корова_Стеллера">Стеллерова морська корова</a></i></b></td>
     <td class="info">Трагічна доля цього виду. Описаний Г. Стеллером - лікарем експедиції мандрівника Берінга в 1741. Декілька сотень морських корів, яких науковці відносять до ряду сирен (Sirenia), мешкало в XVIII столітті у північній частині Тихого океану біля Командорських островів. Мирні велетні, довжиною до 10 метрів, живилися водорістю морською капустою (ламінарією) й не боялися людини. Під час освоєння Аляски та Камчатки на них почалося активне полювання. В 1768 було знищено останню особину цього виду. Нині в музеях світу зберігається близько 20 скелетів цих дивовижних істот.</td>
     <td class="year">????</td>
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_11">
-    <td class="img"><img src="imgs/1.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<tr>
+    <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Слон_індійський">Слон індійський</a></i></b></td>
     <td class="info">Індійський слон разом з африканським слоном (Loxodonta africana) є найбільшим із сучасних ссавців суходолу: вага може досягати 7 тонн. Живе в лісах Південної та Південно-Східної Азії. У більшості місць нині рідкісний вид, охороняється в заповідниках. Одомашнений. Цікаво, що його найближчим родичем є не африканський слон, а вимерлий мамонт.</td>
     <td class="year">????</td>
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_12">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Сніговий_барс">Сніговий барс (ірбіс)</a></i></b></td>
     <td class="info">Розповсюджений у горах на висоті 800-5000 метрів у Центральній Азії. Живиться гірськими козами та баранами. Чисельність неухильно знижується. Внесений до Червоної книги МСОП.</td>
@@ -162,7 +156,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_13">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Зубр">Бізон європейський (зубр)</a></i></b></td>
     <td class="info">Найбільші з наземних ссавців Європи. Занесені до Червоної Книги України.</td>
@@ -170,15 +164,15 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_14">
-    <td class="img"><img src="imgs/19.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<tr>
+    <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Акула-молот_звичайна">Акула - молот</a></i></b></td>
     <td class="info">Одна з найбільших морських істот. Отримала свою назву через незвичайну форму голови. Поширена в тропічних водах Тихого, Індійського й Атлантичного океанів.</td>
     <td class="year">????</td>
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_15">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://en.wikipedia.org/wiki/Cuban_gar">Панцерник кубинський</a></i></b></td>
     <td class="info">Вважається "сучасником динозаврів", який дожив до наших днів. Мешкає у водоймах Південно-Західної Куби та острова Пінос. Хижаки виростають до 3-4 метрів.Тіло вкрите суцільним панциром із міцної луски. Ікра отруйна, м'ясо смачне і поживне.</td>
@@ -186,7 +180,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_16">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://en.wikipedia.org/wiki/Exocoetus_volitans">Двокрил звичайний</a></i></b></td>
     <td class="info">Належить до летючих риб, характерною ознакою яких є здатність до польотів. Виплигнувши з води, летюча риба може пролітати над поверхнею води до 20 метрів.</td>
@@ -194,23 +188,23 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_17">
-    <td class="img"><img src="imgs/5.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<tr>
+    <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Причепа_смугаста">Причепа звичайна (смугаста)</a></i></b></td>
     <td class="info">Риба має на голові велике присисальце у формі диска, за його допомогою причепи парами причіплюються до риб, черепах, китів.</td>
     <td class="year">????</td>
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_18">
-    <td class="img"><img src="imgs/6.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<tr>
+    <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://en.wikipedia.org/wiki/Cyclichthys_orbicularis">Риба - куля (- їжак)</a></i></b></td>
     <td class="info">Тіло риби при небезпеці утворює кулю, вкриту гострими шипами. Поширена у тропічних і субтропічних водах Світового океану.</td>
     <td class="year">????</td>
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_19">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Саламандра_вогняна">Саламандра плямиста (вогняна)</a></i></b></td>
     <td class="info">Поширені в гірських районах Європи. Шкіра саламандр виділяє отруйну речовину.</td>
@@ -218,7 +212,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_20">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Європейський_протей">Протей європейський</a></i></b></td>
     <td class="info">Мешкають в підземних озерах та річечках на заході Балканського півострова.</td>
@@ -226,15 +220,15 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_21">
-    <td class="img"><img src="imgs/3.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<tr>
+    <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Велика_зелена_жаба">Жаба - віл</a></i></b></td>
     <td class="info">Одні з найбільших жаб сучасного світу. Мають гучний голос, що нагадує ревіння вола. Поширені у східній частині Північної Америки. Живуть біля річок у густих чагарникових заростях.</td>
     <td class="year">????</td>
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_22">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Draco_maculatus">Дракон летючий</a></i></b></td>
     <td class="info">Всі летючі дракони живуть в тропічних лісах Південно-Східної Азії, в тому числі й в Індії. Дракони здійснюють польоти за допомогою широких складок шкіри по боках тіла.</td>
@@ -242,15 +236,15 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_23">
-    <td class="img"><img src="imgs/7.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<tr>
+    <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Хамелеон_звичайний">Хамелеон звичайний</a></i></b></td>
     <td class="info">Ящірка. Залежно від настрою, здоров'я і температури забарвлення (яке зазвичай яскраво-зелене) може змінювати колір на блакитний і жовтий. Мешкає на півдні Іспанії, острові Крит, у північній Африці, Малій Азії, Сирії.</td>
     <td class="year">????</td>
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_24">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Пітон_тигровий">Пітон тигровий (індійський)</a></i></b></td>
     <td class="info">Неотруйна змія, загальна довжина якої може сягати 8 метрів. Діапазон поширення: Пакистан, Індія, Бангладеш, Непал, Шрі-Ланка, Індокитай.</td>
@@ -258,7 +252,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_25">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Слонова черепаха (галапагоська)</a></i></b></td>
     <td class="info">Найбільші сучасні суходільні черепахи, ендеміки дев'яти островів Галапагоського архіпелагу.</td>
@@ -266,7 +260,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_26">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Анаконда_жовта">Анаконда парагвайська (жовта)</a></i></b></td>
     <td class="info">Неотруйні змії, загальна довжина яких може сягати 8 метрів. Діапазон поширення: Пакистан, Індія, Бангладеш, Непал, Шрі-Ланка, Індокитай.</td>
@@ -274,7 +268,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_27">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Крокодил_нільський">Крокодил нільський</a></i></b></td>
     <td class="info">Найбільший з трьох видів крокодилів що мешкають в Африці. Мають великі розміри, близько 5-6 метрів. Вага зазвичай становить 500 кілограмів.</td>
@@ -282,7 +276,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_28">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Кубок_Нептуна">Губка келих Нептуна</a></i></b></td>
     <td class="info">Одні з найгарніших губок. Мешкають у тропічних водах. Свою назву дістали за характерну келихоподібну форму.</td>
@@ -290,7 +284,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_29">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Бодяга_ставкова">Бодяга озерна / річкова</a></i></b></td>
     <td class="info">Бодяга озерна – один із небагатьох видів, що живе у прісних водоймах. Висушену та розтерту в порох бодягу використовують як лікарський засіб проти ревматизму, невралгії та інших захворювань.</td>
@@ -298,7 +292,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_30">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Горгонія ситоподібна</a></i></b></td>
     <td class="info">Коралові поліпи, або корали – винятково морські нерухомі тварини, що прикріплюються до субстрату. Вони мають зовнішній або внутрішній скелет, саме його ми бачимо, розглядаючи сухі корали в музеї. Основа коралових рифів – це ніщо інше, як величезна колонія так званих рифоутворювальних видів коралів, які сформувалися протягом мільйонів років. Коралові поліпи дуже різноманітні за формою і забарвленням. Великі скупчення коралів нагадують підводні сади.</td>
@@ -306,7 +300,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_31">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Корал - мозковик</a></i></b></td>
     <td class="info">Мадрепоровий корал-мозковик дістав свою назву за подібність поверхні його колонії до мозку людини.</td>
@@ -314,7 +308,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_32">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Ціп%27як_бичачий">Ціп'як бичачий</a></i></b></td>
     <td class="info">Доросла стадія, що досягає 4-10 метрів у довжину, паразитує в кишківнику людини. Проміжним хазяїном є велика рогата худоба. Людина заражається бичачим солітерометрів, вживаючи сире або недостатньо проварене м’ясо, заражене личинками.</td>
@@ -322,7 +316,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_33">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/П%27явка_медична">П'явка медична</a></i></b></td>
     <td class="info">Досягають довжини 12 сантиметрів. Живуть у прісних водоймах. Медичних п’явок використовують у медицині, для чого їх спеціально вирощують у лабораторних умовах.</td>
@@ -330,7 +324,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_34">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Омар_європейський">Омар європейський</a></i></b></td>
     <td class="info">Поширені у Середземному морі та у водах Східної Атлантики від Ісландії до Марокко. Активні вночі, день проводять у схованках. Живляться крабами, молюсками та іншими безхребетними.</td>
@@ -338,7 +332,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_35">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Мечохвіст антильський</a></i></b></td>
     <td class="info">Найбільший із мечохвостів, що досягає довжини майже одного метра. Мечохвости – невелика група первісних морських членистоногих, яких у сучасній фауні існує лише 5 видів. Ці далекі родичі павуків поширені у водах біля берегів Центральної та Північної Америки та Південно-Східної Азії.</td>
@@ -346,7 +340,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_36">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Ксилокопа_фіолетова">Бджола - тесляр фіолетова</a></i></b></td>
     <td class="info">Бджола-тесляр фіолетова – одна з найбільших бджіл у фауні України. Облаштовує гнізда в деревині, часто використовуючи для цього старі дерев’яні споруди.</td>
@@ -354,7 +348,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_37">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Жук голіаф звичайний</a></i></b></td>
     <td class="info">Жук голіаф звичайний – найбільша бронзівка світової фауни. Як і всі бронзовики, літає, не піднімаючи надкрил. Живе в Африці. Личинки вигодовуються в деревині пальм.</td>
@@ -362,7 +356,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_38">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Kallima_inachus">Метелик каліма листоподібна</a></i></b></td>
     <td class="info">Метелик каліма, склавши крила, дивовижно нагадує листя дерев.</td>
@@ -370,7 +364,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_39">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Совка_Агриппіна">Совка Агрипа</a></i></b></td>
     <td class="info">Найбільший за розмахом крил (до 30 см) метелик світової фауни. Живе у Бразилії та суміжних країнах.</td>
@@ -378,7 +372,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_40">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Тридакна_велетенська">Тридакна велетенська</a></i></b></td>
     <td class="info">Найбільші екземпляри цього виду досягають майже 1,5 метрів завдовжки та можуть важити до 250 кілограмів. Вік таких велетнів, за різними оцінками, становить від 100 до 300 років. Поширені тридакни в місцях розміщення коралових рифів, особливо багато їх у Великому Бар’єрному рифі поблизу Австралії.</td>
@@ -386,7 +380,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_41">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://en.wikipedia.org/wiki/Xenophora_pallidula">Дарувальниця бліда</a></i></b></td>
     <td class="info">Молюски цього роду дуже часто "прикрашають" свою черепашку різноманітними предметами, найчастіше – черепашками інших молюсків.</td>
@@ -394,7 +388,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_42">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Колібрієві">Колібрі</a></i></b></td>
     <td class="info">Родина колібрі налічує близько 320 видів, поширених у Новому світі від Аляски та Лабрадору (Північна Америка) до Вогняної Землі (Південна Америка). Це найменші птахи світу, довжина тіла яких коливається від 5,7 до 25 сантиметрів, а вага – від 1,6 до 20 грамів.</td>
@@ -402,7 +396,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_43">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Ківі_бурий">Ківі звичайний</a></i></b></td>
     <td class="info">Ківі є одними з небагатьох птахів, які, подібно до звірів, мають добре розвинутий нюх, завдяки якому відшукують поживу. У цьому їм допомагає довгий дзьоб із ніздрями на самому його кінчику. Відкладають одне яйце вагою до 500 грамів, що дорівнює 15 % ваги самки.</td>
@@ -410,7 +404,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_44">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Пінгвін_королівський">Пінгвін імператорський / королівський</a></i></b></td>
     <td class="info">Наряду з імператорськими, королівські пінгвіни одні з найбільших за розмірами від усіх пінгвінів. Щільне та густе пір'я, підшкірний шар жиру – усе це допомагає їм витримувати холод Антарктики. Вони відкладають одне яйце. Під час насиджування тримають його між лапами у складці шкіри.</td>
@@ -418,7 +412,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_45">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Альбатрос_мандрівний">Альбатрос мандрівний</a></i></b></td>
     <td class="info">Поширений у Південному океані, а також у південних частинах Тихого, Індійського та Атлантичного океанів. Із сучасних птахів він має найбільший розмах крил – до 3,5 метрів. Свою назву птах дістав за те, що більшу частину життя проводить у далеких мандрах, ширяючи над океанічними просторами далеко від берегів, де розмножується.</td>
@@ -426,7 +420,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_46">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Фаетон_червонохвостий">Фаетон червонохвостий</a></i></b></td>
     <td class="info">Гніздиться колоніями на островах у тропічній і субтропічній зонах Індійського та у західній і центральній частинах Тихого океанів. Ці птахи рідко сідають на воду, але літають дуже добре й зустрічаються в океанах за сотні кілометрів від берега.</td>
@@ -434,7 +428,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_47">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Фрегат-арієль">Фрегат малий</a></i></b></td>
     <td class="info">Поширений у тропічній зоні всіх океанів. Він є одним із найкращих літунів серед птахів. Ноги у фрегата настільки малі, що йому важко пересуватися суходолом та плавати. Не вміють фрегати пірнати за поживою, тому полюють переважно на летючих риб, коли ті вистрибують із води.</td>
@@ -442,7 +436,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_48">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Баклан_імператорський">Баклан синьоокий</a></i></b></td>
     <td class="info">Один із найкрасивіших видів серед бакланів. Його представники мешкають вздовж берегів Південної Америки та прилеглих островів до Антарктичного півострова.</td>
@@ -450,7 +444,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_49">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Пухівка_(птах)">Гага звичайна</a></i></b></td>
     <td class="info">Поширена на північному узбережжі та островах Євразії, Північної Америки. Морський птах, широко відомий своїм надзвичайним пухометрів, дуже легкиметрів, найкращим у світі природним утеплювачем. Єдина гніздова популяція гаги в Україні (у Чорноморському біосферному заповіднику) існує з 1975. Вид внесено до Червоної Книги України.</td>
@@ -458,7 +452,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_50">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Фламінго_рожевий">Фламінго звичайний</a></i></b></td>
     <td class="info">Поширений у тропічних і субтропічних частинах Азії, Африки, Америки та у Південній Європі. Живе на прісноводних і солонуватих водоймах. Конусоподібні великі й високі гнізда будують із мулу. Живляться дрібними водяними тваринами.</td>
@@ -466,7 +460,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_51">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Голуб_мандрівний">Мандрівний голуб</a></i></b></td>
     <td class="info">Цей птах заселяв у неймовірно великій кількості Північну Америку ще в другій половині ХIX століття. На кінець століття був повністю знищений. У природі останній екземпляр загинув у 1899, а в неволі у 1914.</td>
@@ -474,7 +468,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_52">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Квезал_довгохвостий">Квезал</a></i></b></td>
     <td class="info">Поширений у Центральній Америці. Птах не витримує неволі, і саме за свою "волелюбність" з’явився на гербі Гватемали. Грошова гватемальська одиниця також називається на честь цього птаха.</td>
@@ -482,7 +476,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_53">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Дивоптахові">Райські птахи (дивоптахові)</a></i></b></td>
     <td class="info">Коли у 1522 до Європи повернувся корабель "Вікторія", на якому видатний мандрівник Фернан Магеллан вирушив у першу навколосвітню подорож, серед "див" із невідомих країв були й шкурки птахів надзвичайної краси. Їх назвали "райськими птахами", оскільки тривалий час вважалося, що вони мають неземне походження. Поширені у Новій Гвінеї та на Півночі Австралії.</td>
@@ -490,7 +484,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_54">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Вомбат_ведмежий">Короткошерстний вомбат</a></i></b></td>
     <td class="info">Схожі на величезних бабаків, вомбати досягають ваги 35 кілограмів. Розповсюджені в лісах та горах Півдня Австралії та Тасманії. Живуть у норах, живляться рослинами та грибами.</td>
@@ -498,7 +492,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_55">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Деревний_кенгуру_ведмежий">Деревний кенгуру</a></i></b></td>
     <td class="info">Житель лісів Нової Гвінеї. В пошуках їжі може залазити на дерева, за що одержав назву “деревного кенгуру”. Рідкісний вид. Об’єкт полювання в місцевого населення.</td>
@@ -506,15 +500,15 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_56">
-    <td class="img"><img src="imgs/9.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
-    <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Лінивець_трипалий">Лінивець трипалий</a></i></b></td>
+<tr>
+    <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+    <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Лінивець_трипалий">Трипалий лінивець</a></i></b></td>
     <td class="info">У цього виду 9 шийних хребців – найбільша серед сучасних ссавців кількість! Голова може обертатися на 270 градусів. На відміну від інших ссавців, температура тіла лінивця залежить від температури довкілля й коливається у межах 24-33 градусів. Шерсть має зеленкуватий колір завдяки синьо-зеленим водоростяметрів, які оселяються на волоссі лінивця. Розповсюджений у лісах Амазонії (Південна Америка). Деревний, малорухомий звір, зазвичай, висить спиною вниз на гілках церкопії. Живиться листяметрів, квітами та плодами цього ж дерева.</td>
     <td class="year">????</td>
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_57">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Броненосці">Панцирники (броненосці)</a></i></b></td>
     <td class="info">Тіло вкрите міцними кістяними смужками, які охоплюють тіло. Мешканці Нового Світу.</td>
@@ -522,15 +516,15 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_58">
-    <td class="img"><img src="imgs/10.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
-    <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Мурахоїд_великий">икий</a></i></b></td>
+<tr>
+    <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+    <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Мурахоїд_великий">Мурахоїд великий</a></i></b></td>
     <td class="info">Найбільший зі ссавців, що живляться комахами; довжина тіла до 1,2 метра, вага до 40 кілограмів. Мешкає в степах та вологих лісах Південної Америки. Головною їжею є мурахи, терміти та їх яйця. Міцними пазурами довжиною до 10 сантиметрів він руйнує термітники та мурашники, збираючи комах довгим (до 60 сантиметрів) липким язиком. Занесений до Червоної книги МСОП.</td>
     <td class="year">????</td>
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_59">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Калонг">Летюча лисиця</a></i></b></td>
     <td class="info">Найбільші з кажанів. Розповсюджені в тропіках Південно-Східної Азії, Австралії, островів Індійського та Тихого океанів. Попри страхітливу зовнішність та величезні зуби, це мирні звірята, що живляться соковитими фруктами.</td>
@@ -538,7 +532,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_60">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Пискуха_альпійська">Сіноставець алтайський</a></i></b></td>
     <td class="info">Близький родич зайців. Поширений у горах Центральної Азії.</td>
@@ -546,7 +540,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_61">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Бабак_альпійський">Бабак альпійський</a></i></b></td>
     <td class="info">Один із найрідкісніших ссавців Європи. В історичні часи мешкав в Українських Карпатах. Занесений до Червоної Книги України.</td>
@@ -554,7 +548,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_62">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Карликова сумчаста летяга</a></i></b></td>
     <td class="info">Найдрібніший зі ссавців, що здатні до планерування. По боках є літальна перетинка – складка шкіри, яка під час стрибків з дерева на дерево збільшує площу тіла й дозволяє тварині подовжити відстань стрибка. Розповсюджена в лісах Австралії. Живиться комахами та нектаром.</td>
@@ -562,7 +556,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_63">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Капібара_велика">Водосвинка (капібара)</a></i></b></td>
     <td class="info">Водосвинка є найбільшим гризуном у світі. Її вага може досягати 80 кілограмів. Поширена в Південній Америці. Живе групами до 20 особин по берегах річок, озер, на болотах. У багатьох місцях на капібар полюють заради смачного м’яса та шкури.</td>
@@ -570,7 +564,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_64">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Тушкан_великий">Тушкан великий (земляний заєць)</a></i></b></td>
     <td class="info">Схожий на маленького зайця гризун з довгим хвостометрів, який закінчується великою чорно-білою китицею. Заселяє відкриті простори Східної Європи, Середньої Азії та Західного Сибіру. Рекордсмен зі швидкості пересувань серед гризунів (до 40-50 кілометрів на годину). Живе у норах. Активний вночі. На зиму може впадати у сплячку. Занесений до Червоної книги України.</td>
@@ -578,7 +572,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_65">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Полівка_снігова">Снігова полівка</a></i></b></td>
     <td class="info">Цей пристосований для життя серед каміння дрібний гризун живе в горах Європи, Кавказу, Близького та Середнього Сходу, зокрема, й у високогір’ях Українських Карпат. Рідкісний вид, занесений до Червоної книги України.</td>
@@ -586,7 +580,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_66">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Росомаха">Росомаха</a></i></b></td>
     <td class="info">Один із найбільших представників кунячих. Вага до 19 кілограмів. Розповсюджена тайговій зоні Європи, Азії та Північної Америки. У пошуках поживи може мандрувати на відстань у сотні кілометрів. Останню росомаху в Україні знайшли у 1923.</td>
@@ -594,15 +588,15 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_67">
-    <td class="img"><img src="imgs/13.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<tr>
+    <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Носуха_амазонська">Носуха</a></i></b></td>
     <td class="info">Свою назву цей родич єнота отримав за довгий дуже рухливий ніс, за допомогою якого тварина розшукує їжу (фрукти, комах, яйця птахів, дрібних плазунів). Мешкає в лісах від півдня США до Аргентини. Носухи живуть групами, кожна з яких має окрему ділянку.</td>
     <td class="year">????</td>
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_68">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Genetta_tigrina">Тигрова генета</a></i></b></td>
     <td class="info">Цей невеликий за розміром хижак (до 2 кілограмів), який зовні нагадує куницю, належить до особливої групи хижих ссавців (Viveridae), розквіт якої відбувся 9-12 мільйонів років тому. Мешкає в лісах та саванах Південної Африки.</td>
@@ -610,7 +604,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_69">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Кіт_лісовий">Лісовий кіт</a></i></b></td>
     <td class="info">Мешкає в лісах Центральної та Східної Європи, Малої Азії, Кавказу. Рідкісний вид, його занесено до Червоної книги України.</td>
@@ -618,7 +612,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_70">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Рись_євразійська">Рись звичайна (євразійська)</a></i></b></td>
     <td class="info">Рідкісний вид, занесений до Червоної книги України.</td>
@@ -626,15 +620,15 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_71">
-    <td class="img"><img src="imgs/16.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<tr>
+    <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Морж">Морж </a></i></b></td>
     <td class="info">Моржі – дуже великі тюлені: вага дорослих самців сягає 1,5-2 тонн, а самиць – 800-900 кілограмів. Характерна особливість моржів – величезні ікла (до 80 сантиметрів), які допомагають моржеві здобувати поживу з дна моря, вилазити на крижини. Розповсюджені в Північному Льодовитому океані. Під час зимових міграцій запливають у північну частину Тихого океану. Суходолом пересуваються за допомогою всіх кінцівок. Під час розмноження утворюють великі скупчення. Живляться молюсками та ракоподібними, яких здобувають на глибині до 30-50 метрів. Чисельність значно скоротилася в останні десятиліття. Ікла моржів використовуються для різьблення по кості – унікального мистецтва народів Півночі.</td>
     <td class="year">????</td>
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_72">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Сайгак">Сайгак </a></i></b></td>
     <td class="info">Єдина антилопа європейських степів. Морда закінчується своєрідним розширенняметрів, яке зветься “хоботком”. Ця особливість пов'язана з необхідністю очищення повітря при диханні від пилу влітку та його зігріванням узимку. Нині розповсюджений у степах та напівпустелях від Калмикії до Казахстану та Монголії. Раніше західна частина ареалу охоплювала й Україну, де сайгак дожив до ХІХ століття. Їх вбивають заради м’яса, шкіри, рогів, які цінують у східній медицині. Потребує охорони.</td>
@@ -642,7 +636,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_73">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Джейран">Джейран</a></i></b></td>
     <td class="info">Одна з найбільших антилоп помірного поясу Азії. Поширена у напівпустелях від Аравії до Монголії. Живе табунами по декілька сотень тварин. Чисельність невпинно скорочується внаслідок полювання. Джейрана занесено до Червоних книг багатьох країн</td>
@@ -650,7 +644,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_74">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Лемур_варі">Лемур Варі</a></i></b></td>
     <td class="info">Один із найбільших лемурів – своєрідних мавп, які нині водяться лише на Мадагаскарі. Живе у рівнинних та підгірних дощових лісах у східній частині острова. Деревна тварина, активна переважно у сутінках. Тримається невеликими гуртами по 4-10 особин. Основу живлення складають фрукти. Як вид, що перебуває під загрозою знищення, занесено до Червоної книги МСОП.</td>
@@ -658,15 +652,15 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_75">
-    <td class="img"><img src="imgs/18.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<tr>
+    <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Галаго_сенегальський">Сенегальський галаго</a></i></b></td>
     <td class="info">Мешканець вологих лісів Західної Африки. Надзвичайно великі очі допомагають цій мавпочці знаходити здобич вночі (жуків, метеликів тощо). Вдень спить у гніздах, які споруджує на деревах. Щоб не докучав денний гамір, згортає вуха й затикає ними слухові отвори.</td>
     <td class="year">????</td>
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_76">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Даман_капський">Капський даман</a></i></b></td>
     <td class="info">Дамани це невеличкі ссавці, які є віддаленими родичами сучасних слонів та сирен. Поширені в Африці та Південно-західній Азії.</td>
@@ -674,15 +668,15 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_77">
-    <td class="img"><img src="imgs/17.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<tr>
+    <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Білий_носоріг">Носоріг білий</a></i></b></td>
     <td class="info">Один із найбільших ссавців суходолу (вага до 3,5 тонн). Розповсюджений у саванах Африки на південь від Сахари. Переслідується людиною заради м’яса, рогу (цінується в східній медицині). Ареал й чисельність швидко скорочуються. Занесений до Червоної книги МСОП.</td>
     <td class="year">????</td>
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_78">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Білуга">Білуга</a></i></b></td>
     <td class="info">Найбільша прісноводна риба Земної кулі. Для нересту вона заходить далеко в річки. Завдовжки може сягати 5 метрів, вага — до 1 тонни (зазвичай ловлять особин до 2,5 метрів і до 200–300 кілограмів). Занесена до Червоної книги України.</td>
@@ -690,7 +684,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_79">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Акула_блакитна">Акула блакитна (синя, мокой)</a></i></b></td>
     <td class="info">Загальна довжина цієї акули досягає 3,8 метра, з вагою близько 200 кілограмів. Відноситься до океанічних, хоча трапляється іноді біля берегів. Зустрічається скрізь в помірних та тропічних водах Світового океану.</td>
@@ -698,7 +692,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_80">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Пилкорил_звичайний">Пилкорил звичайний</a></i></b></td>
     <td class="info">Загальна довжина цього ската коливається від 4,8 до 7,6 метра завдовжки вагою 315—400 кілограмів. Рострум довгий, плаский, має вигляд мечеподібного виросту, становить 1/4 загальної довжини цієї риби. Це яйцеживородний скат. Самиця народжує 15-20 дитинчат. Мешкає в Індійському, Тихому та Атлантичному океанах. Запливає до Середземного моря.</td>
@@ -706,7 +700,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_81">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://en.wikipedia.org/wiki/Cape_elephantfish">Калоринх капський</a></i></b></td>
     <td class="info">Поширений у водах Індійського океану. Передня частина рила у нього видовжена у своєрідний сильно стиснутий з боків "хобот". Цей орган служить як локатор і як "лопата", за допомогою якої тварина знаходить собі їжу.</td>
@@ -714,7 +708,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_82">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Морський_кіт">Хвостокол звичайний (морський кіт)</a></i></b></td>
     <td class="info">Мешкає даний вид в Північно-Східній Атлантиці, а також в Середземному і Чорному морях. Назву (хвостокол) йому дали за те, що він б'є порушника свого спокою хвостом, озброєним колючкою. Це знаряддя тварина використовує тільки для оборони, а не для добування їжі.</td>
@@ -722,7 +716,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_83">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Псевдолопатоніс_великий">Лопатоніс амудар'їнський</a></i></b></td>
     <td class="info">Дуже рідкісна річкова риба, яка мешкає в каламутних водах Амудар'ї у Середній Азії. У лопатоноса кінець хвостового плавця витягнутий у довгу хвостову нитку.</td>
@@ -730,7 +724,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_84">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Піранья_звичайна">Піранья червона</a></i></b></td>
     <td class="info">Ця річкова північноамериканська риба зажила недоброї слави. Збираючись зграями, піраньї нападають на здобич, і, вириваючи із тіла дрібні шматочки, за лічені хвилини залишають від тварин лише кістяк.</td>
@@ -738,7 +732,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_85">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Амур_білий">Білий амур</a></i></b></td>
     <td class="info">Його батьківщина - річки Китаю та Далекого Сходу: Амур та Уссурі. Живиться білий амур водяними рослинами - очеретом, комишем тощо. М'ясо амура смачне й жирне.</td>
@@ -746,7 +740,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_86">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Вугор_європейський">Вугор європейський</a></i></b></td>
     <td class="info">Вугор європейський водиться в річках і озерах Північної Америки та Європи. Вугри досягають 2 метрів завдовжки та ваги до 6 кілограмів. Їхнє м'ясо високо цінується на світовому ринку. Місце нересту цієї риби Саргасове море біля берегів Америки. Личинки які щойно народились, підхоплюються течією й повільно переносяться до берегів Європи й Америки.</td>
@@ -754,7 +748,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_87">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Тунець_жовтоперий">Тунець жовтоперий</a></i></b></td>
     <td class="info">Поширений у водах Індійського, Тихого та Атлантичного океанів. Розміри тунця досягають 2 метрів, а вага 130 кілограмів. Живиться цей хижак різними рибами, головоногими молюсками та ракоподібними. Тунець це важливий промисловий вид. М'ясо смачне й поживне.</td>
@@ -762,7 +756,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_88">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Морський_коник_довгорилий">Морський коник довгорилий</a></i></b></td>
     <td class="info">Поширені морські коники в тропічних та помірних морях всього світу. Названі так за свій зовнішній вигляд, верхня частина їх тіла нагадує голову коня. Морські коники є яйцеживородними та єдиними відомими тваринами, у яких вагітніє та народжує потомство самець, а не самиця.</td>
@@ -770,7 +764,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_89">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Тритон_звичайний">Тритон звичайний</a></i></b></td>
     <td class="info">Ця невелика, до 11 сантиметрів завдовжки, тваринка зустрічається біля неглибоких водойм: струмків, озер, ставків, стариків річок у лісах Європи та західного Сибіру.</td>
@@ -778,7 +772,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_90">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Болотна_черепаха_європейська">Черепаха болотяна</a></i></b></td>
     <td class="info">Ареал виду охоплює Південну та Центральну Європу, Передню Азію та Північно-Західну частину Африки. В Україні мешкає у річках басейну Чорного моря та в Криму. Це тварини, які дуже чутливі до погіршення середовища існування, тож їх можна вважати «видом-показником» якості довкілля.</td>
@@ -786,7 +780,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_91">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Довгоголова_морська_черепаха">Логгерхед</a></i></b></td>
     <td class="info">Єдиний представник роду довгоголових морських черепах родини морських черепах підряду морських черепах. Має 2 підвиди. Інша назва лоґергед. Завдовжки досягає 95 сантиметрів (іноді 1,3—2,13 метра), жива вага до 110 кілограмів (рідше 160), разом з панциром до 450 кілограмів. Полюбляє тропічні та субтропічні води. Веде пелагічний морський спосіб життя. На суходіл виходить лише для відкладання яєць. Харчується переважно тваринною їжею — крабами, молюсками, рідше медузами й рибою.</td>
@@ -794,7 +788,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_92">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Токей">Токі</a></i></b></td>
     <td class="info">Є справжнім велетнем серед геконів. Довжина тіла 34-36 сантиметрів, вага 150-300 грамів. Забарвлення верхньої сторони тіла світло-оливкового, сірого або блакитного кольору з численними оранжево-червоними та білими кільцями, а також плямами. Поширений у Південній і Південно-Східній Азії.</td>
@@ -802,7 +796,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_93">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Ігуана-носоріг">Ігуана - носоріг</a></i></b></td>
     <td class="info">Поширена на острові Сан-Домінго в Атлантичному океані. На верхній стороні морди цієї ігуани є три великі конусоподібні вирости, які нагадують роги носорога, унаслідок чого вона й дістала свою назву.</td>
@@ -810,7 +804,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_94">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Полоз_Шренка">Полоз амурський</a></i></b></td>
     <td class="info">Велика змія завдовжки до 2 метрів, поширена у Північному Китаї, Кореї й загалом на Далекому Сході між вищеназваними країнами. Трапляється в лісах і чагарниках, живиться пацюками, дрібними птахами та яйцями.</td>
@@ -818,7 +812,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_95">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Гюрза">Гюрза</a></i></b></td>
     <td class="info">Вид отруйних змій з роду велетенських гадюк родини гадюкові. Загальна довжина досягає 2 метрів, а вага добігає до 3 кілограмів. Гюрза — дуже небезпечна отруйна змія, після її укусу домашні тварини та люди тяжко хворіють й нерідко гинуть. Отрута різко вираженої гемолітичної дії (впливає на кров і кровотворні органи). Гюрза є основним «постачальником» отрути, від неї отримують отруту для потреб фармакології й медицини. Мешкає у Північно-Західній Африці, островах Середземного моря, Західній, Середній та Південній Азії до Північно-Західної Індії.</td>
@@ -826,7 +820,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_96">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Кобра_середньоазійська">Кобра середньоазійська</a></i></b></td>
     <td class="info">Загальна довжина досягає 1—1,5 метра. Голова помірного розміру, широка. Тулуб стрункий, кремезний. Має «каптур», який розкриває при небезпеці. Отруйні зуби короткі. Хоча ця кобра дуже отруйна, але кусає людину вона дуже рідко. Поширена у Середній Азії (Афганістані, Північно-Східному Ірані, Північно-Західному Пакистані, Киргизстані, Туркменістані, Таджикистані, Узбекистані, невеликими ділянками на Закавказзі).</td>
@@ -834,7 +828,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_97">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Куфія_бамбукова">Куфія бамбукова</a></i></b></td>
     <td class="info">Представник ямкоголових змій. Мешканець лісових нетрів Південної та Південно-Східної Азії. Отруйна змія.</td>
@@ -842,7 +836,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_98">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Кобра_єгипетська">Кобра єгипетська</a></i></b></td>
     <td class="info">Полюбляє степові, пустельні місцини, гори, руїни, чагарники або завали каміння. Отрута небезпечна, становить загрозу життю людини, має нейротоксичні властивості. Істота мешкає у Північній (окрім Тунісу), Західній та Східній Африці до екватора, на Аравійському півострові.</td>
@@ -850,7 +844,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_99">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Алігатор_міссісіпський">Алігатор міссісіпський</a></i></b></td>
     <td class="info">Один з двох сучасних видів алігатора. Його природний ареал включає південно-східну частину США. Середня довжина дорослих самок не перевищує 3 метрів, довжина самців в середньому коливається від 4 до 4,5 метрів. Природний ареал охоплює Північну Америку — південно-східні штати США уздовж Атлантичного узбережжя і Мексиканської затоки. Алігатори є хижаками та живляться всім, що в змозі зловити. Основу їх раціону складають риби, черепахи, змії та невеликі ссавці. Молоді особини вживають в їжу комах, равликів і невеликих рибок. Полюють в основному вночі.</td>
@@ -858,7 +852,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_100">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Варан_сірий">Варан сірий (пустельний)</a></i></b></td>
     <td class="info">Вид плазунів роду варан, розповсюджений в Північній Африці та Південно-Західній Азії. Відомо три підвиди сірих варанів — номінативний північноафриканський, середньоазійський та смугастий. У довжину сірий варан сягає 1,5 метра, вага тварини до 3,5 кілограмів. Сірі варани мають гарний зір, непоганий слух і чудовий нюх. Харчується він гризунами, комахами, скорпіонами, фалангами, ящірками, зміями, навіть отруйними, жабами, молодими їжаками та черепахами, зрідка птахами.</td>
@@ -866,7 +860,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_101">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Шипохвіст_єгипетський">Шипохвіст звичайний</a></i></b></td>
     <td class="info">Довжина сягає 75 сантиметрів, іноді 80. Колір шкіри одноманітний — сірий або бурий, іноді з дрібними темними цятками. Молоді шипохвости зі світлими поперечними смугами та плямами.Полюбляють піщану, кам'янисту місцину. Риють глибокі нори до 4 метрів завдовжки. Мають підвищену стійкість до високих температур середовища, зберігаючи активність при температурі ґрунту 53-57 градусів. Можуть тривалий час залишатися без води. Харчуються комахами, рослинами, квітами та плодами. При небезпеці ховаються у нору, виставляючи шипуватий хвіст назовні, яким роблять швидкі рухи. М'ясо і жир шипохвостів в деяких країнах вживають в їжу. Мешкають у Північній й Східній Африці, Південно-Західній Азії. // 
@@ -877,7 +871,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_102">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Калкан_чорноморський">Калкан чорноморський</a></i></b></td>
     <td class="info">Вид риб з родини Калканових, поширений у Чорному морі. Його часто розглядають як підвид Калкана великого, що мешкає в Середземному морі. Тіло високе, висота тіла майже дорівнює довжині або навіть більше. Тіло вкрите кістковими конічними шипами. Тіло калкана може досягати довжини 80-85 сантиметрів і маси 12-15 кілограмів. Самці менші за самиць. Може досягати віку 16 років. Калкан водиться тільки в Чорному та Азовському морях, заходить у гирла Дніпра і Дністра. Калкан — хижа риба. Вона живиться дрібною рибою, дрібними ракоподібними, молюсками.</td>
@@ -885,7 +879,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_103">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Морський півень жовтий</a></i></b></td>
     <td class="info">Один з дев'яти видів роду морських півнів; єдиний вид роду у фауні України. Поширені у східній Атлантиці від Норвегії до Кап-Блану вздовж берегів Африки, відсутній біля Мадейри та Азор. Також відомий у Середземному і Чорному морях. У Червоній книзі України має природоохоронний статус «Рідкісний».</td>
@@ -893,7 +887,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_104">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Spongia_officinalis">Грецька губка</a></i></b></td>
     <td class="info">Широко використовуються в повсякденному побуті, медицині, в промисловості, зокрема в ювелірній справі.</td>
@@ -901,7 +895,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_105">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://en.wikipedia.org/wiki/Lubomirskia_baikalensis">Байкальська губка</a></i></b></td>
     <td class="info">Ендеміки озера Байкал. Тіло цих губок може сягати одного метра заввишки. </td>
@@ -909,7 +903,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_106">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Мадрепорові корали</a></i></b></td>
     <td class="info">Мають добре розвинений зовнішній скелет. Більшість видів утворюють колонії. </td>
@@ -917,7 +911,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_107">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Волосатик, або водяний волос</a></i></b></td>
     <td class="info">Личинки паразитують у комахах та інших членистоногих. Дорослі черви мешкають у воді.</td>
@@ -925,7 +919,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_108">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Балянус">Морські жолуді</a></i></b></td>
     <td class="info">Їхнє тіло заховано у вапнякову черепашку, яка складається з окремих пластин. Дорослі тварини ведуть нерухомий спосіб життя, прикріплюючись до будь-яких підводних предметів і морських тварин. </td>
@@ -933,7 +927,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_109">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Лангусти</a></i></b></td>
     <td class="info">Деякі лангусти досягають ваги понад 8 кілограмів. Не мають клешень. Поширені у Середземному морі та в Атлантичному океані. </td>
@@ -941,7 +935,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_110">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Краб_камчатський">Камчатський краб</a></i></b></td>
     <td class="info">Живе великими табунами та здійснює сезонні міграції. Самці досягають ваги 7 кілограмів і розміру 1,5 метра між кінцями середніх ніг. Мають велике промислове значення. </td>
@@ -949,7 +943,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_111">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Скорпіон_кримський">Скорпіон кримський</a></i></b></td>
     <td class="info">Водиться в Криму. Розмір 35-40 міліметрів. Активний уночі, полює на дрібних безхребетних за допомогою жала з отруйною залозою, що міститься на кінці тіла.</td>
@@ -957,7 +951,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_112">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Сольпуга_звичайна">Сольпуга павукоподібна</a></i></b></td>
     <td class="info">Хижак, що сягає 5 сантиметрів завдовшки й дуже швидко бігає. В Україні найчастіше трапляється в Криму. Полює вночі на комах, що збираються на світло ламп. </td>
@@ -965,7 +959,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_113">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Дибка_степова">Дибка степова</a></i></b></td>
     <td class="info">Найбільший представник коників у фауні України, що досягає 8 сантиметрів завдовшки. Поширений у степах. Вид занесено до Червоної книги України.</td>
@@ -973,7 +967,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_114">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Гніздо оси звичайної</a></i></b></td>
     <td class="info">Часто влаштовується в норах гризунів або в інших схованках у ґрунті.</td>
@@ -981,7 +975,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_115">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://en.wikipedia.org/wiki/Cyphogastra_javanica">Круглочерева златка яванська</a></i></b></td>
     <td class="info">Мешкають на островах Нової Гвінеї.</td>
@@ -989,7 +983,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_116">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Жук-олень">Жук-рогач звичайний</a></i></b></td>
     <td class="info">Один з найбільших та найцікавіших жуків Європи. Самиця, на відміну від самців, рогів не має.</td>
@@ -997,7 +991,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_117">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Абалон">Морське вухо</a></i></b></td>
     <td class="info">Перламутровий шар, що міститься на мушлях, використовується для виготовлення прикрас. У Китаї та Японії здавна вважаються цінним харчовим продуктом.</td>
@@ -1005,7 +999,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_118">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://en.wikipedia.org/wiki/Cassis_madagascariensis">Шоломниця мадагаскарська</a></i></b></td>
     <td class="info">Живуть на невеликих глибинах поблизу берегів. Закопавшись у пісок, полюють на свою здобич - інших черевоногих молюсків.</td>
@@ -1013,7 +1007,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_119">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://en.wikipedia.org/wiki/Strombus">Молюски-стромбуси</a></i></b></td>
     <td class="info">Попри масивні черепашки, ці молюски можуть швидко пересуватись і навіть стрибати завдяки особливій будові ноги.</td>
@@ -1021,7 +1015,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_120">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Мурекс</a></i></b></td>
     <td class="info">Звичайний вид, поширений в Індійському та Тихому океанах. Черепашка має багато довгих тонких відростків, завдяки яким схожа на скелет риби.</td>
@@ -1029,7 +1023,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_121">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://en.wikipedia.org/wiki/Monetaria_moneta">Молюск ципрея грошова</a></i></b></td>
     <td class="info">Ці маленькі ципреї використовувались як прикраси, а з появою торгівлі як гроші.</td>
@@ -1037,7 +1031,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_122">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Головоногі">Головоногі молюски</a></i></b></td>
     <td class="info">Найбільш високоорганізовані молюски, які мають розвинену нервову систему. Деякі головоногі сягають довжини 18 метрів, але є маленькі види довжиною до 1 сантиметра. Під час небезпеки викидають чорнильний заряд, який розпливається у воді чорною хмарою</td>
@@ -1045,7 +1039,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_123">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Acanthaster_planci">Коралоїд терновий вінець</a></i></b></td>
     <td class="info">Звичайний мешканець коралових рифів Тихого та Індійського океанів. Живиться кораловими поліпами.</td>
@@ -1053,7 +1047,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_124">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Морські_зірки">Морськи зірки</a></i></b></td>
     <td class="info">Характеризуються багатопроменевим тілом (п'ять променів і більше). Ведуть донний спосіб життя. Хижаки. Найбільші види досягають 70 сантиметрів.</td>
@@ -1061,7 +1055,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_125">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Голотурії">Голотурії</a></i></b></td>
     <td class="info">Мають мішкоподібну форму тіла, за що їх називають "морськими огірками". Їх широко вживають у їжу у країнах Південно-Східної Азії.</td>
@@ -1069,7 +1063,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_126">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Пінгвін_Аделі">Діорама "Пінгвіни"</a></i></b></td>
     <td class="info">Діорама "Пінгвіни" відображає природу навколо Української антарктичної станції "Академік Вернадський". На ній представлено колонію пінгвінів Аделі та антарктичних. Пінгвіни щорічно кочують, долаючи відстань 600-700 кілометрів, до місць гніздування, а з настанням осені повертаються назад, на північ.</td>
@@ -1077,7 +1071,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_127">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Змієшийка_американська">Змієшийка</a></i></b></td>
     <td class="info">Поширена від південно-східної частини США до півночі Південної Америки. Коли змієшийка пливе, то над поверхнею води час від часу можна бачити тільки її голову і S-подібно вигнуту шию, яка нагадує вигин тіла змії. Живиться рибою, яку під водою протикає двома половинками напіввідкритого дзьоба, витягає на поверхню води й тільки тоді ковтає.</td>
@@ -1085,7 +1079,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_128">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Казарка_червоновола">Казарка червоновола</a></i></b></td>
     <td class="info">Гніздяться тільки в тундрі та північній лісотундрі Західного Сибіру від півострова Ямал до басейну ріки Хатанги. Зимують на півдні України. Вид внесено до Червоної Книги України.</td>
@@ -1093,7 +1087,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_129">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Каргарка_магеланська">Магеланова гуска</a></i></b></td>
     <td class="info">Поширена в Південній Америці. Численні зграї цих гусок стають конкурентами вівцям, поїдаючи траву на пасовищах.</td>
@@ -1101,7 +1095,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_130">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Лелека_чорний">Лелеки чорний / білий</a></i></b></td>
     <td class="info">Лелека білий мешкає в Європі, Північній Африці, Малій і Середній Азії, на Далекому Сході, в Японії. В Україні птах поширений повсюдно. Дуже міцні гнізда, які витримують найсильніші вітри та бурі, будують на дахах будівель і деревах. Лелека чорний поширений майже по всій Європі, крім півночі та тропічних областей. В Україні мешкає переважно на Поліссі та в Карпатському регіоні.</td>
@@ -1109,7 +1103,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_131">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Китоголов">Китоглав</a></i></b></td>
     <td class="info">Живе у східній частині Африки. Особлива прикмета цього великого птаха – надзвичайно могутній широкий дзьоб, верхня щелепа якого закінчується міцним, гострим, загнутим донизу гачком. Живиться рибою, жабами, зміями та молюсками.</td>
@@ -1117,7 +1111,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_132">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Ібіс_священний">Ібіс священний</a></i></b></td>
     <td class="info">Поширений у тропічній Африці, Мадагаскарі та Іраку. Приліт ібісів навесні до Єгипту завжди збігався з піком розливу річки Ніл, родючий мул якої був запорукою високих врожаїв для давніх єгиптян. За їхніми уявленнями, ібіс був символом Тома - бога мудрості та правосуддя.</td>
@@ -1125,7 +1119,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_133">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Орлан-білохвіст">Орлан-білохвіст</a></i></b></td>
     <td class="info">Ареал охоплює більшу частину Євразії (переважно лісотундрова та лісова зони). В Україні – рідкісний осілий птах. Гніздо влаштовує на старих деревах або скелях. Живиться переважно рибою, але іноді полює на диких качок та інших птахів, зокрема й на ссавців розміром до зайця. Вид внесено до Червоної Книги України.</td>
@@ -1133,7 +1127,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_134">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Соколоподібні">Ловчі соколи</a></i></b></td>
     <td class="info">Здавніх часів люди використовували соколів для полювання. Добре навчений ловчий сокіл оцінювався на вагу золота.</td>
@@ -1141,7 +1135,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_135">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Шуліка_рудий">Шуліка рудий</a></i></b></td>
     <td class="info">Мешкає в Європі, Малій Азії та Закавказзі. Птах на межі зникнення. Вид занесено до Червоної Книги України та охоронних списків багатьох європейських країн.</td>
@@ -1149,7 +1143,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_136">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Птах-секретар">Птах-секретар</a></i></b></td>
     <td class="info">Мешкає в саванах Африки на південь від Сахари. На потилиці є довгі чорні пір’їни, які нагадують пера, застромлені за вуха в писаря. Живиться гризунами, зміями, ящірками, забиваючи їх ударами ніг.</td>
@@ -1157,7 +1151,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_137">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Дрохва_євразійська">Дрохва</a></i></b></td>
     <td class="info">У минулому була поширена повсюдно у степовій зоні Євразії, у Північній Африці. Тепер у межах колишнього суцільного ареалу гніздиться лише на окремих острівцях, що лишились від нього. Вид внесено до Червоної Книги України.</td>
@@ -1165,7 +1159,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_138">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Журавель-вінценос_південний">Журавель вінценосний сірий</a></i></b></td>
     <td class="info">Поширені в Африці на південь від екватора. Споруджують гнізда на деревах.</td>
@@ -1173,7 +1167,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_139">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Брижач">Брижач</a></i></b></td>
     <td class="info">Гніздиться на півночі Євразії. Шлюбне пір'я у самців з’являється у квітні-травні – це барвисті комірці. Під час токування самці стають у бойові пози, настобурчують комірці, розпускають хвости та роблять символічні випади, залякуючи своїх суперників.</td>
@@ -1181,7 +1175,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_140">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Лопатень">Лопатень</a></i></b></td>
     <td class="info">Ендемік Чукотського півострова. На зиму відлітає в Південно-Східну Азію. Кулик має дзьоб у вигляді совочка зі щипчиками на кінці, за допомогою яких вибирає на дні водойм поживу з мулу.</td>
@@ -1189,7 +1183,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_141">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Чоботар">Шилодзьобка</a></i></b></td>
     <td class="info">Поширена у Південній Європі, Південній Азії та Африці. В Україні звичайний гніздовий птах узбереж Чорного, Азовського морів і Сиваша. Живиться різними водними безхребетними, блукаючи, а іноді й плаваючи по воді.</td>
@@ -1197,7 +1191,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_142">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Сніжниця_жовтодзьоба">Сивка біла</a></i></b></td>
     <td class="info">Населяють острови між Антарктидою та Південною Америкою. Живляться морськими безхребетними тваринами, яйцями птахів, іноді викрадають пташенят.</td>
@@ -1205,7 +1199,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_143">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Кульон_великий">Кроншнеп великий</a></i></b></td>
     <td class="info">Ареал охоплює Євразію. В Україні зрідка гніздиться на Поліссі та на узбережжях Чорного й Азовського морів. Вид внесено до Червоної Книги України</td>
@@ -1213,7 +1207,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_144">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Коронач_західний">Вінценосний голуб</a></i></b></td>
     <td class="info">Найбільший представник ряду голубоподібних. Ендемік Нової Гвінеї та прилеглих островів.</td>
@@ -1221,7 +1215,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_145">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Ара_червоно-зелений">Ара зеленокрилий</a></i></b></td>
     <td class="info">Поширений у тропічних лісах Південної Америки. Здійснює розбійницькі напади на фруктові плантації. Міцний дзьоб дозволяє йому розгризати кісточки плодів, які за міцністю можна порівняти з камінням.</td>
@@ -1229,7 +1223,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_146">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Какапо">Совиний папуга</a></i></b></td>
     <td class="info">Ендемік Нової Зеландії. Нелетючий птах, веде нічний спосіб життя.</td>
@@ -1237,7 +1231,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_147">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Нестор-кака</a></i></b></td>
     <td class="info">Гніздиться на високогір’ях Нової Зеландії, вище лісової смуги, де дмуть сильні вітри та взимку випадає сніг. Основна пожива Нестора – рослини, фрукти та безхребетні тварини.</td>
@@ -1245,7 +1239,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_148">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Таязура-подорожник_каліфорнійська">Велика зозуля-подорожник</a></i></b></td>
     <td class="info">Поширена в південно-західних районах США та Мексиці. Більшу частину життя проводить на землі, літає неохоче та тільки на короткі відстані. Під час бігу розвиває швидкість до 40 кілометрів на годину. Живиться ящірками, зміями, великими комахами.</td>
@@ -1253,7 +1247,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_149">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Туракові">Турако</a></i></b></td>
     <td class="info">Поширені в Африці на південь від Сахари. Традиційно родину відносили до ряду зозулеподібних. На відміну від справжніх зозуль вони самі насиджують і вигодовують своїх пташенят.</td>
@@ -1261,7 +1255,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_150">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Сипуха_крапчаста">Сипуха</a></i></b></td>
     <td class="info">Поширена в Європі, Африці, Азії, Америці та Австралії. Гніздиться в населених пунктах у покинутих або маловідвідуваних кам’яних чи дерев’яних будівлях, а також у дуплах старих дерев. Живиться мишовидними гризунами, іноді дрібними птахами та крабами. Полює тільки вночі. Вид занесено до Червоної Книги України.</td>
@@ -1269,7 +1263,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_151">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Сова_біла">Сова біла</a></i></b></td>
     <td class="info">Кругополярний птах. Живе в тундрі на берегах і островах Північного Льодовитого океану. В Україні – рідкісний залітний вид. </td>
@@ -1277,7 +1271,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_152">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Сліпак_східний">Сліпак звичайний</a></i></b></td>
     <td class="info">Сліпаки, або зінські щенята, є одними з найдосконаліших ссавців-землериїв. Очі в цих звірів відсутні, за що вони й одержали назву “сліпаків”. Зубами, які виростами губ ізольовано від ротової порожнини, вони в повному розумінні не риють, а “вигризають” довжелезні нори, чому сприяє й сплющена згори форма голови. Мешкають у Східній Європі, на Близькому Сході, Передній Азії, Африці. Живляться підземними частинами рослин. У фауні України відомо 5 видів сліпаків, 4 із яких занесено до Червоної книги України.</td>
@@ -1285,7 +1279,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_153">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Опосум звичайний</a></i></b></td>
     <td class="info">Один із небагатьох видів сумчастих ссавців Центральної та Північної Америки. Вагітність триває всього 13 діб. Вага новонароджених не перевищує 0,13 грамів. Загальна кількість малят у виводку може досягати 25, та всі вони можуть вміститися в чайній ложці. Опосумів як лабораторних тварин утримують у віваріях.</td>
@@ -1293,7 +1287,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_154">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Wallabia_bicolor">Валабі двоколірний</a></i></b></td>
     <td class="info">Ці кенгуру живуть в лісах Східної Австралії. На відміну від інших видів кенгуру, ведуть переважно поодинокий та нічний спосіб життя.</td>
@@ -1301,7 +1295,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_155">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Кенгуру_велетенський">Велетенський сірий кенгуру</a></i></b></td>
     <td class="info">Найбільший представник сучасних сумчастих ссавців. Довжина тіла доходить до 120-140 сантиметрів, вага – 50-90 кілограмів. Стоячи на задніх лапах, самці мають зріст до 2 метрів. Розповсюджений на відкритих просторах та лісах Південної Австралії й Тасманії. Утворює групи по 20-50, а в часи посухи – до 200 тварин. Тікаючи, розвиває швидкість до 50 кілометрів на годину, здійснюючи при цьому 9-метрові стрибки. За рік народжують лише одне маля. Вагітність триває 36 діб. Малюк залишається в сумці матері близько року. Чисельність велетенських кенгуру швидко скорочується.</td>
@@ -1309,23 +1303,23 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_156">
-    <td class="img"><img src="imgs/11.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<tr>
+    <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Заєць_сірий">Заєць сірий (русак)</a></i></b></td>
     <td class="info">Улюблений герой казок усіх народів Європи. Розповсюджений у Європі, Азії, Північній Африці. На півночі України крім сірого зайця зрідка трапляється й, занесений до Червоної книги України заєць-біляк (Lepus timidus), зимове хутро якого майже цілковито біле.</td>
     <td class="year">????</td>
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_157">
-    <td class="img"><img src="imgs/4.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<tr>
+    <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Вивірка_звичайна">Білка звичайна (Вивірка) </a></i></b></td>
     <td class="info">Характерний мешканець лісів Європи й Азії. Завдяки великому хвосту, який допомагає при стрибках, може стрибати з дерева на дерево на відстань до 10-15 метрів. Колір хутра змінюється з рудого чи бурого влітку, до сірого й, навіть, чорного взимку. Особини чорної масті трапляються в Українських Карпатах.</td>
     <td class="year">????</td>
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_158">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Ховрахи</a></i></b></td>
     <td class="info">Характерні мешканці степів, напівпустель Європи, Азії, Північної Америки. В гори підіймаються до висоти 3500 метрів. Впадають у зимову сплячку, яка триває 5-7, а у пустельних видів – до 9 місяців. В Україні поширені 4 види ховрахів, чисельність яких в останні десятиліття скорочується.</td>
@@ -1333,7 +1327,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_159">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Бурундук_сибірський">Бурундук азійський (сибірський)</a></i></b></td>
     <td class="info">Розповсюджені у тайговій зоні Європи та Азії. Добре лазять по деревах, але постійно живуть у норах. На відміну від білок взимку впадають в сплячку. Утворюють великі запаси насіння та кедрових горішків, які використовують навесні.</td>
@@ -1341,7 +1335,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_160">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Агуті</a></i></b></td>
     <td class="info">Розповсюджений у Центральній та Південній Америці. Живе парами, які зберігаються до смерті одного з партнерів. Самці активно захищають кордони своєї території від вторгнення чужинців. Живляться переважно фруктами, часто супроводжують зграї мавп, підбираючи плоди, що падають із дерев.</td>
@@ -1349,7 +1343,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_161">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Їжатець_індійський">Дикобраз (їжатець) індійський</a></i></b></td>
     <td class="info">Схожий на величезного їжака: голова, спина, боки тіла вкриті довгими чорно-білими голками. Мешкає в Південній Європі, Азії, Африці. Утворює великі нори, може селитися в печерах. Живиться рослинами.</td>
@@ -1357,7 +1351,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_162">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Бобер_європейський">Бобер європейський (річковий)</a></i></b></td>
     <td class="info">Це справжній велетень серед гризунів Європи та Азії. Вага бобра може досягати 30 кілограмів, довжина – до 130 сантиметрів. Селиться сім’ями по берегах річок, які запруджує, перегороджуючи греблями. Має цінне хутро. Нині охороняється в більшості країн Європи.</td>
@@ -1365,7 +1359,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_163">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Шиншила_звичайна">Шиншила</a></i></b></td>
     <td class="info">Живе у гірських районах Анд у Південній Америці на висоті від 3 до 5 кілометрів. Коротке густе та м'яке хутро вважається одним із найдорожчих у світі. З початку 20-х років XX століття шиншил розводять на фермах у США та Європі. Чисельність природних популяцій невпинно знижується. Вид внесено до Червоної книги МСОП.</td>
@@ -1373,15 +1367,15 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_164">
-    <td class="img"><img src="imgs/12.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<tr>
+    <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Meriones_libycus">Піщанка червонохвоста</a></i></b></td>
     <td class="info">Мешканець пустель Африки, Передньої, Середньої та Центральної Азії. Колоніальний вид. Великі скупчення його нірок утворюють так звані “містечка”. Підземні ходи прокладає на глибині до 1-1,5 метра. Основу живлення складає насіння та цибулинки рослин. На зиму робить запаси їжі до 9 кілограмів. Один із головних природних носіїв збудників небезпечних для людини інфекцій пустельної зони (шкіряний лейшманіоз, чума та інші).</td>
     <td class="year">????</td>
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_165">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Куниця_лісова">Куниця лісова</a></i></b></td>
     <td class="info">Розповсюджена в Європі, Передній, Середній та Центральній Азії. Мешкає і в Україні. Схожа на куницю лісову (Martes martes), від якої відрізняється білим кольором горлової плями та здатністю жити поблизу людини, в тому числі й у великих містах. Живиться гризунами та птахами, в окремі сезони основу їжі можуть складати рослини (плоди, ягоди). Віддавна об’єкт полювання. За часів Русі кунячими шкурками платили данину. Цей кмітливий і спритний звір так сподобався нашим предкам, що став у їхній свідомості прототипом дівчини на виданні. І тому весілля в Україні не могли відгуляти без полювання стрільця-молодця на куницю-красну дівицю. Охороняється в ряді країн Європи.</td>
@@ -1389,7 +1383,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_166">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Візон_річковий">Американська норка</a></i></b></td>
     <td class="info">Мешканець Північної Америки. Має цінне хутро. Завезена в 30-ті роки XX століття до Європи, на Південь та Далекий Схід Сибіру. У місцях акліматизації витісняє з довкілля норку європейську (Mustela lutreola), із якою конкурує за місця поселення, поживу, сховища.</td>
@@ -1397,7 +1391,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_167">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Видра_річкова">Видра річкова</a></i></b></td>
     <td class="info">Мешканець річок та інших водоймищ майже всієї території Європи та Азії від пустель та тропіків до тайги. Головна їжа – риба. Має цінне хутро. Полювання та забруднення річок у ряді країн призвели до зниження чисельності. Видру внесено до Червоних книг України та МСОП.</td>
@@ -1405,7 +1399,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_168">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Ласиця_мала">Ласиця мала (ласка)</a></i></b></td>
     <td class="info">Найдрібніший хижий ссавець у світі. Довжина тіла в окремих підвидів не перевищує 15 сантиметрів. Терени поширення та особливості зимового й літнього вбрання подібні до горностая. Живиться переважно дрібними ссавцями. Завдяки своїм малим розмірам добуває їх безпосередньо в норах гризунів.</td>
@@ -1413,15 +1407,15 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_169">
-    <td class="img"><img src="imgs/15.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<tr>
+    <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Горностай">Горностай</a></i></b></td>
     <td class="info">Ці рідкісні хижі ссавці лісової зони Європи та Азії влітку мають двоколірне забарвлення хутра: верх темно-коричневий, низ – білий. Узимку хутро чисто-біле. Кінчик хвоста в горностая завжди чорний. Хвостиками горностаїв прикрашали мантії всіх правителів середньовічної Європи й тому полювання на горностаїв було окремим промислом. Внесені до Червоної книги України.</td>
     <td class="year">????</td>
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_170">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Ведмідь_бурий">Ведмідь бурий</a></i></b></td>
     <td class="info">Один з улюблених персонажів фольклору народів Європи, Азії та Північної Америки. Попри зовнішню незграбність, бурий ведмідь є спритним та могутнім звіром. Він може наздоганяти здобич зі швидкістю до 40 кілометрів на годину. Цікаво, що вага новонароджених ведмедиків не перевищує 500 грамів. Колись був поширений повсюдно в лісовій та лісостеповій зоні України, нині зберігся тільки в Карпатах. Заслуговує охорони.</td>
@@ -1429,15 +1423,15 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_171">
-    <td class="img"><img src="imgs/14.jpg" style="width: 150px; height: 150px; border-radius: 50%;"></td>
+<tr>
+    <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Ведмідь_білий">Ведмідь білий</a></i></b></td>
     <td class="info">Найбільші з сучасних хижих ссавців суходолу: вага до 800 кілограмів. Розповсюджені в арктичних широтах Європи, Азії, та Північної Америки. Більшу частину свого життя проводять серед крижин, де полюють на тюленів, які є головною їжею для них. Добре плавають. Для розмноження ведмедиці виходять на суходіл, де збираються в так званих “пологових будинках”. У найвідомішому з них на острові Врангеля щорічно скупчується до 250 самиць, які в січні-квітні народжують 1-2 ведмежат вагою 700-800 грамів. Перебувають під охороною в усіх місцях поширення.</td>
     <td class="year">????</td>
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_172">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Динго">Динго</a></i></b></td>
     <td class="info">Найбільший та найчисельніший із сучасних хижаків Австралії. Динго є нащадками здичавілих собак, яких завезли до Австралії перші переселенці з Південно-Східної Азії 5-6 тисяч років тому.</td>
@@ -1445,7 +1439,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_173">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Вовк">Вовк</a></i></b></td>
     <td class="info">Ареал цього добре відомого хижака є найбільшим серед сучасних ссавців. Однак, його винищено у більшості країн Західної та Центральної Європи та у більшій частині Північної Америки. Окремі підвиди внесені до Червоної книги МСОП. В Україні чисельність вовка доволі велика, відтак не викликає підстав для занепокоєння за його долю як біологічного виду.</td>
@@ -1453,7 +1447,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_174">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Пума">Пума (кугуар)</a></i></b></td>
     <td class="info">Одні з найбільших американських хижих ссавців. Їх ще називають “американськими левами”. Поширені від Аляски на півночі до Патагонії на півдні. Живляться, переважно, великими ратичними тваринами. Окремі підвиди пум внесено до Червоної книги МСОП.</td>
@@ -1461,7 +1455,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_175">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Леопард">Леопард</a></i></b></td>
     <td class="info">Живуть в Африці та Азії (від Аравії до узбережжя Японського моря). Забарвлення цих великих котів буває двох типів – звичайний плямистий та чорний (так звана чорна пантера). Живляться великими тваринами. Відомі випадки людожерства. Всі азійські підвиди внесені до Червоної книги МСОП.</td>
@@ -1469,7 +1463,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_176">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Лев">Лев</a></i></b></td>
     <td class="info">Лев – один із головних персонажів африканського фольклору. В європейській культурі отримав назву “цар звірів” й опинився на багатьох гербах європейських країн. В Україні лев прикрашає герб старовинного Львова. Найбільший хижий ссавець Африки, мандрує за табунами ратичних тварин, які складають основу його поживу. Ще до VIII-X століття леви водились на півдні Європи, а до початку XIX століття були широко розповсюджені в Південній Азії (від Іраку до Індії). Нині в Азії вони збереглись лише в заповідниках штату Гуджарат в Індії.</td>
@@ -1477,7 +1471,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_177">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Бурчелова зебра</a></i></b></td>
     <td class="info">Мешкає в Африці на південь від Сахари на відкритих посушливих просторах (саванах). Зебри разом з іншими ратичними (гну, імпали та інші антилопи) утворюють великі спільні табуни. Місцеве населення полює на зебр заради м’яса, шкури. Для європейців це об’єкт спортивного полювання.</td>
@@ -1485,7 +1479,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_178">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Лось_звичайний">Лось європейський (звичайний)</a></i></b></td>
     <td class="info">Найбільший з оленів Євразії. Об'єкт промислового полювання. В Україні лосі занесені до Червоної книги.</td>
@@ -1493,7 +1487,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_179">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Бубал_біломордий">Бубал (біломордий)</a></i></b></td>
     <td class="info">Антилопи є середніх розмірів із характерними ліроподібними рогами. Довжина тіла до 2 метрів, вага – до 150 кілограмів. Мешкають в Африці на південь від Сахари в саванах, напівпустелях, лісах. Тримаються групами.</td>
@@ -1501,7 +1495,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_180">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Імпала">Імпала</a></i></b></td>
     <td class="info">Одні з найкрасивіших антилоп. Мешканці саван та лісів Африки. Табунці імпал часто зустрічаються разом з іншими видами антилоп, зебрами та, навіть, слонами. Мають багато ворогів, головними з яких є гепард та леопард.</td>
@@ -1509,7 +1503,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_181">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Cercopithecus_neglectus">Мавпа Бразза</a></i></b></td>
     <td class="info">Цей вид є одним з найгарніших видів мавп Старого Світу. Розповсюджені в тропічних лісах Західної та Центральної Африки. Живуть гуртами з декількох десятків особин, які очолюють самці. Живляться як рослинами, так і дрібними тваринами. Мають багато ворогів, головними з яких є леопарди та хижі птахи.</td>
@@ -1517,7 +1511,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_182">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Мавпа_Діани">Мавпа Діани</a></i></b></td>
     <td class="info">Одні з найкрасивіших мавп Старого Світу. Мешканці тропічних лісів Західної та Центральної Африки. Живуть гуртами з декількох десятків особин, які очолюють самці. Живляться як рослинами, так і дрібними тваринами. Мають багато ворогів, головними з яких є леопарди та хижі птахи.</td>
@@ -1525,7 +1519,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_183">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Шимпанзе_звичайний">Шимпанзе (звичайний)</a></i></b></td>
     <td class="info">Мешкають у Західній та Центральній Африці в тропічних лісах та саванах. В гори підіймаються до 3 кілометрів. Ведуть напівдеревний спосіб життя. На землі проводять до третини дня. На ніч будують гнізда на деревах. Всеїдні. Крім рослинної їжі живляться комахами, яйцями птахів, дрібними мавпами й антилопами. Мисливські здібності притаманні, головним чином, самцям. За анатомічними та біологічними особливостями шимпанзе є найближчими до людини тваринами. Дуже різноманітні засоби спілкування шимпанзе – широкий діапазон звукових сигналів, жести, міміка, що нагадують людську. Про їхню розвинену розумову діяльність свідчить здатність виготовляти знаряддя праці, колективні полювання тощо. Відомі успішні досліди з навчання шимпанзе людській мові глухих. Знаходяться під загрозою винищення. Разом із карликовим шимпанзе (Pan paniscus) внесені до Червоної книги МСОП.</td>
@@ -1533,7 +1527,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_184">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Ревун_рудий">Ревун рудий</a></i></b></td>
     <td class="info">Одні з найбільших мавп Південної Америки: довжина тіла до 90 сантиметрів, вага до 9 кілограмів. Мешкають у тропічних лісах північно-західної частини Амазонського регіону. Провадять суто деревний спосіб життя, активні від світанку до смеркання. Живуть родинними гуртами. Надзвичайно голосні крики самців можна почути на відстані до 3 кілометрів. Ними ревуни зранку позначають положення групи мавп та заявляють свої права на зайняту територію</td>
@@ -1541,7 +1535,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_185">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Золотиста_кирпоноса_мавпа">Рінопітек роксоланів</a></i></b></td>
     <td class="info">Розповсюджені у гірських лісах Південного та Південно-Східного Китаю й Північного В'єтнаму. За кирпатий ніс цих мавп називають кирпатими тонкотілими мавпами. Живуть на деревах у бамбукових і хвойних лісах на висоті до чотирьох кілометрів. Коли у верхніх поясах гір настає зима й випадає сніг, ринопітеки спускаються у тропічні долини.</td>
@@ -1549,7 +1543,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_186">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Веслоніс_американський">Веслоніс американський</a></i></b></td>
     <td class="info">Прісноводна риба з ряду осетроподібних — це єдиний представник монотипового роду Веслоніс. Переважно живуть в озері Ері та річці Міссісіпі, а також у деяких річках, що впадають у Мексиканську затоку. Довжина сягає 2 метрів, а маса — 75 кілограмів. Мають рострум веслоподібної форми, який складає близько третини всієї довжини тіла. Через м'ясо та ікру мають важливе промислове значення у Північній Америці.</td>
@@ -1557,7 +1551,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_187">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Міксина</a></i></b></td>
     <td class="info">Міксини — нічні хижаки. Живляться ослабленою та хворою рибою, рідше падлом та червами.</td>
@@ -1565,7 +1559,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_188">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Катран_короткоперий">Катран звичайний</a></i></b></td>
     <td class="info">Вид акул родини катранових. Як і всі акули, катрани мають обтічну форму тіла, що вважається однією з досконалих для риб. Яйцеживородні акули. Самиці народжують понад 15 малят завдовжки 22-27 сантиметрів. З м'яса можна виготовляти консерви й балики.</td>
@@ -1573,7 +1567,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_189">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Акула_довгокрила">Акула довгокрила</a></i></b></td>
     <td class="info">Досягають 3,5-4 метрів у довжину і ваги 20-60 кілограмів. Розмножуються живородінням. Приносять п'ять-сім дитинчат довжиною до 40 сантиметрів. Зустрічаються повсюдно в тропічній зоні. Відомі випадки нападу довгокрилих акул на людей зі смертельним результатом.</td>
@@ -1581,7 +1575,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_190">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Пилкорил_звичайний">Пил(к)орил звичайний</a></i></b></td>
     <td class="info">Скати з роду Риба-пилка. Рострум довгий, плаский, має вигляд мечеподібного виросту, на ньому знаходяться від 24 до 34 зубів. Мешкають в Індійському, Тихому та Атлантичному океанах.</td>
@@ -1589,7 +1583,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_191">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Баракуда_велика">Баракуда велика</a></i></b></td>
     <td class="info">Великі хижі риби родини Sphyraenidae водяться у теплих морях. Вони можуть досягати до 2 метрів. Баракуди мають дуже гострі зуби, живляться переважно рибою, але іноді нападають на людей.</td>
@@ -1597,7 +1591,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_192">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Верхогляд звичайний</a></i></b></td>
     <td class="info">Риби родини коропових. Розповсюджені у Європі, Малій Азії, Сибіру, на Кавказі. Живуть тільки у водоймах з чистою водою та гарним кисневим балансом</td>
@@ -1605,7 +1599,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_193">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Змієголов</a></i></b></td>
     <td class="info">Риби родини Змієголові (Channidae). Деякі з них можуть пересуватися по землі, як змії, і дихати повітрям.Раціон різних видів змієголовів включає рибу, жаб, змій, гризунів, птахів і комах.</td>
@@ -1613,7 +1607,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_194">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Луфар">Луфар( - танцівниця)</a></i></b></td>
     <td class="info">Морські зграйні риби ряду окунеподібних. Зустрічаються в Атлантичному та Індійському океанах, також поширені у тропічних і помірних морях, в Україні — у Чорному та Азовському морях.</td>
@@ -1621,7 +1615,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_195">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Мероу велетенська</a></i></b></td>
     <td class="info">Вони зустрічаються в усіх тропічних і субтропічних морях. Забарвлення, як правило, дуже яскраве і різноманітне, типове для мешканців коралових рифів. Цінні для промислу риби.</td>
@@ -1629,7 +1623,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_196">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Морський_півень_жовтий">Морський півень жовтий (тригла жовта)</a></i></b></td>
     <td class="info">Морські півні — хижі риби. Харчуються малорухомими та нерухомими донними тваринами, намацуючи їх променями грудних плавників, а також рибою, креветками та крабами. В процесі полювання «ноги» є незамінною зброєю, за допомогою якої морські півні намацують у піску малорухомі організми.</td>
@@ -1637,7 +1631,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_197">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Риба-метелик">Риба - метелик (пантодон)</a></i></b></td>
     <td class="info">Вид прісноводних риб, єдиний представник родини Pantodontidae. У природі ці тварини зустрічаються в басейнах річок у тропічній Африці. Використовуються як акваріумні риби.</td>
@@ -1645,7 +1639,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_198">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Сом_звичайний">Сом європейський (звичайний)</a></i></b></td>
     <td class="info">Прісноводна донна річкова риба, що живе на глибоких ділянках річок, глибоких протоках і старицях, в озерах і водосховищах, також у солонуватих водах лиманів. Найбільша прісноводна риба в Європі. Цінна промислова риба.</td>
@@ -1653,7 +1647,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_199">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Жаба_гостроморда">Жаба гостроморда</a></i></b></td>
     <td class="info">Цей вид поширений в Європі та Азії. Характеризується жаба однотонним забарвленням черева та великими плямами на вухах та часто (але не завжди) блідішою смужкою на спині. Досягає 7 сантиметрів завдовжки, її голова більш витягнута, ніж у звичайної європейської жаби.</td>
@@ -1661,7 +1655,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_200">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Кумка_червоночерева">Кумка червоночерева (звичайна)</a></i></b></td>
     <td class="info">Земноводні тварини родини кумкових ряду Безхвостих, що мешкають у водоймах. Невеликі за розміром істоти, спинна поверхня яких зазвичай сіро-коричнюватих (інколи зелених) тонів з невиразними темнішими плямами неправильної форми. Ареал охоплює територію Центральної та Східної Європи: від Данії та Західної Німеччини на заході до Уральських гір на сході, на півдні — до Кавказьких гір, на півночі — до Фінської затоки.</td>
@@ -1669,7 +1663,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_201">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Ропуха_зелена">Ропуха зелена</a></i></b></td>
     <td class="info">Зелені ропухи в Україні трапляються майже повсюдно. У гірських районах Карпат та Криму підіймаються на висоту понад 1000 метрів. Тварини живляться наземними безхребетними — двокрилими, жуками та іншими. Ареал зелених ропух пролягає від Західної Франції та далі на схід. Охоплює майже всі європейські країни, в тому числі південь Швеції, країни Балтії, Білорусь, Україну.</td>
@@ -1677,7 +1671,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_202">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Тритон_гірський">Тритон альпійський (гірський)</a></i></b></td>
     <td class="info">Тритони поширені на більшій частині території Центральної Європи — від Франції на заході до Румунії та українських Карпат на сході. Дорослі особини харчуються дощовими черв'яками, личинками комах, равликами та павуками, під час водної фази харчуються дрібними ракоподібними. Гірські тритони занесені до Червоної книги України та віднесені до II категорії</td>
@@ -1685,7 +1679,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_203">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Часничниця_звичайна">Часничниця (Землянка) звичайна</a></i></b></td>
     <td class="info">Мешкають в Європі, зокрема в Україні, а також у країнах Близького Сходу до західних районів Казахстану. Воліють пересуватися суходолом. Полюбляють лісисті та степові місцини. Харчуються безхребетними, зокрема комахами.</td>
@@ -1693,7 +1687,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_204">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Агама</a></i></b></td>
     <td class="info">Поширені в Африці скрізь, окрім Мадагаскару. Більшість живуть в лісах на деревах або скелях, іноді підіймаються високо в гори, деякі види також пристосовуються до життя в селах, наприклад всередині солом'яних хатин.</td>
@@ -1701,7 +1695,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_205">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Алігатор_китайський">Алігатор китайський</a></i></b></td>
     <td class="info">Один із двох сучасних видів алігатора. Природний ареал цього виду включає східну частину басейну річки Янцзи в Китаї. Нині китайські алігатори мешкають тільки в басейні річки Янцзи на східному узбережжі Китаю. Алігатори є хижаками, що ведуть нічний спосіб життя. Дорослі особини харчуються рибою, зміями, молюсками, невеликими ссавцями та водоплавними птахами. Молоді алігатори споживають комах та інших дрібних безхребетних. Китайські алігатори знаходяться під загрозою зникнення і включені до Міжнародної Червоної Книги.</td>
@@ -1709,7 +1703,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_206">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Веретільниця_ламка">Веретільниця ламка (гладун)</a></i></b></td>
     <td class="info">Порівняно великі безногі ящірки зі змієподібними тілами загальною довжиною до 50 сантиметрів. Самці трохи менші за самиць. Полюбляють широколистяні та мішані ліси, зустрічаючись також на межі лісів, полів і лугів, на лісових галявинах та у садах. У горах підіймаються до висоти 2500 метрів над рівнем моря. Широко поширені у Малій Азії, на Кавказі та в північному Ірані, у Центральній, Західній, Південній Європі. Щодо півночі, то їх можна побачити у Данії, Норвегії та Швеції. На схід - це країни Балтії, Білорусь, Польща, Молдова, Україна. На схід від України зустрічаються аж до лівобережної долини річки Тобол.</td>
@@ -1717,7 +1711,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_207">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Гадюка_звичайна">Гадюка звичайна (ґалиця)</a></i></b></td>
     <td class="info">Це найрозповсюдженіший вид гадюк у Євразії. У межах ареалу зустрічається кілька підвидів. В Україні звичайну гадюку можна зустріти в лісовій, лісостеповій зонах та в Карпатах. Гадюка звичайна відносно невелика в розмірах, довжиною до 75 сантиметрів. Отрута звичайної гадюки за механізмом токсичної дії є отрутою переважно геморагічної (викликає крововилив) та місцевої некротичної дії. Викликає швидке згортання крові.</td>
@@ -1725,7 +1719,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_208">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Гримучник_техаський">Гримучник техаський</a></i></b></td>
     <td class="info">Отруйна змія з роду Справжній гримучник родини Гадюкові. Загальна довжина досягає 1,7-2,5 метри. Вага 0,5-7 кілограмів. Голова широка, тулуб стрункий, товстий. Очі великі, зіниці вертикальні. Це яйцеживородна змія. Отрута в неї досить потужна та має гемотоксичну, цитотоксичну та міотоксичну властивості. Отруту використовують у медицині. Істота мешкає на південному сході Канади, півдні та заході США, півночі Мексики.</td>
@@ -1733,7 +1727,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_209">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Куфія_бамбукова">Куфія бамбукова (будру-пам)</a></i></b></td>
     <td class="info">Отруйна змія з роду Куфія родини Гадюкові. Загальна довжина досягає одного метра. Голова широка, трикутна. Тулуб стрункий, хвіст чіпкий. Укус для людини не смертельний. Крім того, вона кусає лише в разі якщо їм заподіюють біль або сильно їх роздратували. Це живородні змії. Самки народжують від 8 до 15 дитинчат. Мешкають у Пакистані, Непалі, на Андаманських і Нікобарських островах (Індія), Філіппінах, Південно-Східному Китаї, Тайвані.</td>
@@ -1741,7 +1735,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_210">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Полоз_ескулапів">Полоз ескулапів (лісовий)</a></i></b></td>
     <td class="info">Інша назва «лісовий полоз». Населяють передгір'я букові та, рідше, хвойні ліси, мішані широколистяні ліси з вічнозеленим підліском, грабняки, чайні плантації, фундукові сади, лісові галявини, вологі луки, розріджені чагарникові зарості, схили залісених ущелин. Зустрічаються до висоти 2 кілометрів над рівнем моря. Харчуються мишоподібними гризунами, землерийками, птахами, їх пташенятами та яйцями. Це яйцекладні змії. В Україні ареал охоплює Карпати, Закарпаття, південно-західну Україну.</td>
@@ -1749,7 +1743,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_211">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Прикрашена_черепаха_ієрогліфова">Прикрашена черепаха ієрогліфова</a></i></b></td>
     <td class="info">Полюбляють різного роду водойми з помірною течією, кам'янистим дном, багатою рослинністю. Взимку іноді впадають у сплячку, зариваючись в бруд або мул. При цьому їхній метаболізм сповільнюється, вони практично не дихають, тільки зрідка споживають кисень прямо з води. Харчуються рибою, земноводними, ракоподібними, комахами, водними рослинами. Мешкають від Південної Кароліни по Атлантичному узбережжю до Мексиканської затоки.</td>
@@ -1757,7 +1751,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_212">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Ящірка_живородна">Ящірка живородна (лісова ящірка)</a></i></b></td>
     <td class="info">Живородні ящірки мають здатність пристосовуватися до кліматичних і висотних умов. Висота проживання: від 0 до 3000 метрів. Полюбляють лісові та вологі місцини, болота, торфовища, галявини, чагарники. В Україні живуть у Карпатах, Закарпатті та на Поліссі, частково в Західному Лісостепу, досить рідкісні.</td>
@@ -1765,7 +1759,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_213">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="http://uk.wikipedia.org/wiki/Пеламіда_двоколірна">Пеламіда двоколірна</a></i></b></td>
     <td class="info">Отруйні змії роду Пеламіда є єдиними представниками свого роду з підродини Морських змій родини аспідових. Ці морські змії ніколи не виходять на сушу. Вони харчуються рибою, яку попередньо вбивають отрутою. Ці змії є живородними, при цьому самка народжує 3-8 дитинчат у воді. Вони мешкають у Тихому та Індійському океанах на північ до Японії та на південь до узбережжя Австралії.</td>
@@ -1773,7 +1767,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_214">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Крапчаста сумчаста лисиця</a></i></b></td>
     <td class="info">Хижі сумчасті ссавці, які мешкають в лісах Австралії, Тасманії та Нової Гвінеї. Головою нагадують кішку, а тулубом куницю. Їхня чисельність швидко скорочується через вирубку лісів та переслідування з боку собак та лисиць (яких до Австралії завезли люди).</td>
@@ -1781,7 +1775,7 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_215">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Ящір</a></i></b></td>
     <td class="info">Тіло вкрито роговою лускою. Представники родини Ящури або Панголіни (Manidae) є мешканцями Африці й Азії.</td>
@@ -1789,14 +1783,13 @@ h1 {
     <td class="place">◼ 1, □ 12</td>
 </tr>
 
-<tr class="anim_216">
+<tr>
     <td class="img"><img src="https://static.thenounproject.com/png/13643-200.png" style="width: 150px; height: 150px; border-radius: 50%;"></td>
     <td class="name"><b><i><a href="">Глибоководний електричний скат</a></i></b></td>
     <td class="info">Більшість представників ряду відомі своєю здатністю виробляти електричний розряд напругою від 8 до 220 вольтів, залежно від виду. Струм використовується для полювання та захисту.</td>
     <td class="year">????</td>
     <td class="place">◼ 1, □ 12</td>
 </tr>
-
 </table>
 </div>
 <p><i>оригінальна розробка - <a href = "https://micahlt.github.io/">Micah Lindley</a></i></p>
