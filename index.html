@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,12 +8,12 @@
 <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,900&display=swap" rel="stylesheet">
 <style>
 .hover-image {
-  position: absolute;
-  display: none;
-  height: 300px;
-  width: auto;
-  border-radius: 10%;
-  transition: opacity 0.5s ease-in-out;
+    position: fixed;
+    display: none;
+    height: 250px;
+    width: auto;
+    border-radius: 10%;
+    transition: opacity 0.5s ease-in-out;
   z-index: 9999;
 }
 
@@ -1848,26 +1849,27 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
   <script>
 function showHoverImage(event) {
-  var image = document.querySelector('.hover-image');
-  if (image.style.display !== 'block') {
-    image.src = event.target.src;
-    image.style.left = event.clientX + 'px';
-    image.style.top = event.clientY + 'px';
-    image.style.opacity = '0'; // Set initial opacity to 0
-    image.style.display = 'block';
-    setTimeout(function() {
-      image.style.opacity = '1'; 
-    }, 1); 
-    image.style.transition = 'opacity 0.5s ease-in-out'; 
-  }
-}
-    function hideHoverImage() {
-      var image = document.querySelector('.hover-image');
+    var image = document.querySelector('.hover-image');
+    if (image.style.display !== 'block') {
+      image.src = event.target.src;
+      image.style.left = event.pageX + 'px'; 
+      image.style.top = event.pageY + 'px'; 
       image.style.opacity = '0';
+      image.style.display = 'block';
       setTimeout(function() {
-        image.style.display = 'none';
-      }, 500);
+        image.style.opacity = '1';
+      }, 1);
+      image.style.transition = 'opacity 0.5s ease-in-out';
     }
+  }
+
+  function hideHoverImage() {
+    var image = document.querySelector('.hover-image');
+    image.style.opacity = '0';
+    setTimeout(function() {
+      image.style.display = 'none';
+    }, 500);
+  }
   </script>
 </body>
 </html>
